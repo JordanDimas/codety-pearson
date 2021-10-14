@@ -6,8 +6,9 @@ import cors from 'cors';
 const errorHandler = require('./src/helpers/errorhandler.helper');
 
 //routes
-import UsrRoutes from './src/routes/user/usr.routes';
-import SesionRoutes from './src/routes/session/session.routes';
+import UserRoutes from './src/routes/user.routes';
+import SesionRoutes from './src/routes/session.routes';
+import AvatarRoutes from './src/routes/avatar.routes';
 
 class Server{
 
@@ -30,6 +31,8 @@ class Server{
     routes(): void{
         //usr
         this.app.use('/v1/session',SesionRoutes);
+        this.app.use('/v1/avatar',AvatarRoutes);
+        this.app.use('/v1/user',UserRoutes);
 
         //Error handler
         this.app.use(errorHandler.internalServerError);

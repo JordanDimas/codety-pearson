@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import pool from '../../database';
+import pool from '../database';
 import jwt from 'jsonwebtoken';
 import { v4 as uuidv4 } from 'uuid';
 require('dotenv').config({ path: '../../../.env' });
@@ -11,7 +11,8 @@ class sessionController {
         const usuario = req.body;
         let resp: any;
         try {
-            resp = await pool.query(`SELECT u.nombre,
+            resp = await pool.query(`SELECT u.id_usuario,                      
+                                            u.nombre,
                                             u.apellido_paterno apelllidoPaterno,
                                             u.apellido_materno apellidoMaterno,
                                             u.nombre_usuario nombreUsuario,
@@ -21,7 +22,8 @@ class sessionController {
                                             gra.nombre grado,
                                             gru.grupo ,
                                             ce.año,
-                                            ce.ciclo
+                                            ce.ciclo,
+                                            e.nombre escuela
                                     FROM    usuario u,
                                             rol r ,
                                             inscripcion i,
@@ -29,14 +31,18 @@ class sessionController {
                                             pais p,
                                             grado gra,
                                             grupo gru,
-                                            ciclo_escolar ce
+                                            ciclo_escolar ce,
+                                            escuela e,
+                                            distribucion_escuela de
                                     WHERE   r.id_rol = u.id_rol and
                                             u.id_usuario = i.id_usuario and
-                                            i.id_ciudad = c.id_ciudad and
-                                            i.id_grado = gra.id_grado and
-                                            i.id_grupo = gru.id_grupo and
-                                            i.id_ciclo_escolar = ce.id_ciclo_escolar and
                                             p.id_pais = c.id_pais and
+                                            i.id_distribucion_escuela = de.id_distribucion_escuela and
+                                            de.id_grupo = gru.id_grupo and
+                                            de.id_escuela = e.id_escuela and
+                                            e.id_ciudad = c.id_ciudad and
+                                            de.id_grado = gra.id_grado and
+                                            i.id_ciclo_escolar = ce.id_ciclo_escolar and
                                             u.nombre_usuario = ? and 
                                             u.contraseña = ?`,
                 [[req.body.nombreUsuario], [req.body.contraseña]]
@@ -48,14 +54,42 @@ class sessionController {
                 const token = generateAccesToken(usuario);
                 console.log("token: ", token);
 
+                let resultado = {
+                    usuario: {
+                        id_usuario: resp[0].id_usuario,
+                        nombre: resp[0].nombre,
+                        apelllidoPaterno: resp[0].apelllidoPaterno,
+                        apellidoMaterno: resp[0].apellidoMaterno,
+                        nombreUsuario: resp[0].nombreUsuario,
+                        rol: resp[0].rol,
+                    },
+                    escuela: {
+                        escuela: resp[0].escuela,
+                        grado: resp[0].grado,
+                        grupo: resp[0].grupo,
+                        ciclo: resp[0].ciclo,
+                        año: resp[0].año,
+                        ciudad: resp[0].ciudad,
+                        pais: resp[0].pais,
+                    },
+                    insignias: [{
+                        id_insignia: 1,
+                        nombre: "comprension lectora",
+                        alias: "corazon",
+                        cantidad: 50
+                    }, {
+                        id_insignia: 2,
+                        nombre: "categoria 2",
+                        alias: "corona",
+                        cantidad: 200
+                    }]
+                }
+
                 const response = {
                     codigo: "200.pearson.0000",
                     mensaje: "operacion exitosa",
                     folio: uuidv4(),
-                    resultado: {
-                        userToken: token,
-                        usuario: resp[0]
-                    }
+                    resultado: resultado
                 };
 
                 res.json(response);

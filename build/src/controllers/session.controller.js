@@ -13,7 +13,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.SessionController = void 0;
-const database_1 = __importDefault(require("../../database"));
+const database_1 = __importDefault(require("../database"));
 const jsonwebtoken_1 = __importDefault(require("jsonwebtoken"));
 const uuid_1 = require("uuid");
 require('dotenv').config({ path: '../../../.env' });
@@ -24,7 +24,8 @@ class sessionController {
             const usuario = req.body;
             let resp;
             try {
-                resp = yield database_1.default.query(`SELECT u.nombre,
+                resp = yield database_1.default.query(`SELECT u.id_usuario,                      
+                                            u.nombre,
                                             u.apellido_paterno apelllidoPaterno,
                                             u.apellido_materno apellidoMaterno,
                                             u.nombre_usuario nombreUsuario,
@@ -61,14 +62,41 @@ class sessionController {
                 if (resp.length > 0) {
                     const token = generateAccesToken(usuario);
                     console.log("token: ", token);
+                    let resultado = {
+                        usuario: {
+                            id_usuario: resp[0].id_usuario,
+                            nombre: resp[0].nombre,
+                            apelllidoPaterno: resp[0].apelllidoPaterno,
+                            apellidoMaterno: resp[0].apellidoMaterno,
+                            nombreUsuario: resp[0].nombreUsuario,
+                            rol: resp[0].rol,
+                        },
+                        escuela: {
+                            escuela: resp[0].escuela,
+                            grado: resp[0].grado,
+                            grupo: resp[0].grupo,
+                            ciclo: resp[0].ciclo,
+                            año: resp[0].año,
+                            ciudad: resp[0].ciudad,
+                            pais: resp[0].pais,
+                        },
+                        insignias: [{
+                                id_insignia: 1,
+                                nombre: "comprension lectora",
+                                alias: "corazon",
+                                cantidad: 50
+                            }, {
+                                id_insignia: 2,
+                                nombre: "categoria 2",
+                                alias: "corona",
+                                cantidad: 200
+                            }]
+                    };
                     const response = {
                         codigo: "200.pearson.0000",
                         mensaje: "operacion exitosa",
                         folio: uuid_1.v4(),
-                        resultado: {
-                            userToken: token,
-                            usuario: resp[0]
-                        }
+                        resultado: resultado
                     };
                     res.json(response);
                 }

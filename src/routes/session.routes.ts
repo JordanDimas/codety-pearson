@@ -1,6 +1,6 @@
 import { Router } from "express";
 //
-import { SessionController } from '../../controllers/session/session.controller';
+import { SessionController } from '../controllers/session.controller';
 
 class usrRoutes{
     public router : Router = Router();

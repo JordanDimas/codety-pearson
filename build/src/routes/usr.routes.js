@@ -1,7 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = require("express");
-const usr_controller_1 = require("../controllers/usr.controller");
+//
+const session_controller_1 = require("../controllers/session.controller");
 //controller
 //import {usrController} from '';
 class usrRoutes {
@@ -10,7 +11,7 @@ class usrRoutes {
         this.config();
     }
     config() {
-        this.router.get('/login', usr_controller_1.UsrController.get);
+        this.router.get('/login', session_controller_1.SessionController.login);
     }
 }
 const UsrRoutes = new usrRoutes();

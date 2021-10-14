@@ -8,7 +8,10 @@ const morgan_1 = __importDefault(require("morgan"));
 const cors_1 = __importDefault(require("cors"));
 //errorHandler7
 const errorHandler = require('./src/helpers/errorhandler.helper');
-const session_routes_1 = __importDefault(require("./src/routes/session/session.routes"));
+//routes
+const user_routes_1 = __importDefault(require("./src/routes/user.routes"));
+const session_routes_1 = __importDefault(require("./src/routes/session.routes"));
+const avatar_routes_1 = __importDefault(require("./src/routes/avatar.routes"));
 class Server {
     constructor() {
         this.app = express_1.default();
@@ -25,6 +28,8 @@ class Server {
     routes() {
         //usr
         this.app.use('/v1/session', session_routes_1.default);
+        this.app.use('/v1/avatar', avatar_routes_1.default);
+        this.app.use('/v1/user', user_routes_1.default);
         //Error handler
         this.app.use(errorHandler.internalServerError);
         this.app.use(errorHandler.notFound);

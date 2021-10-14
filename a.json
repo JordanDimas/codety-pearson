@@ -1,0 +1,112 @@
+[
+    {
+        "id_avatar": 1,
+        "nombre": "jardinero",
+        "descripcion": "",
+        "path": "",
+        "reg_status": "activo",
+        "created_by": "developer",
+        "created_date": "2021-10-10T05:00:00.000Z",
+        "last_update_by": "developer",
+        "last_update_date": "2021-10-10T05:00:00.000Z"
+    },
+    {
+        "id_avatar": 2,
+        "nombre": "matematico",
+        "descripcion": "",
+        "path": "",
+        "reg_status": "activo",
+        "created_by": "developer",
+        "created_date": "2021-10-10T05:00:00.000Z",
+        "last_update_by": "developer",
+        "last_update_date": "2021-10-10T05:00:00.000Z"
+    },
+    {
+        "id_avatar": 3,
+        "nombre": "fotografo",
+        "descripcion": "",
+        "path": "",
+        "reg_status": "activo",
+        "created_by": "developer",
+        "created_date": "2021-10-10T05:00:00.000Z",
+        "last_update_by": "developer",
+        "last_update_date": "2021-10-10T05:00:00.000Z"
+    },
+    {
+        "id_avatar": 4,
+        "nombre": "astronauta",
+        "descripcion": "",
+        "path": "",
+        "reg_status": "activo",
+        "created_by": "developer",
+        "created_date": "2021-10-10T05:00:00.000Z",
+        "last_update_by": "developer",
+        "last_update_date": "2021-10-10T05:00:00.000Z"
+    },
+    {
+        "id_avatar": 5,
+        "nombre": "pirata",
+        "descripcion": "",
+        "path": "",
+        "reg_status": "activo",
+        "created_by": "developer",
+        "created_date": "2021-10-10T05:00:00.000Z",
+        "last_update_by": "developer",
+        "last_update_date": "2021-10-10T05:00:00.000Z"
+    },
+    {
+        "id_avatar": 6,
+        "nombre": "pintor",
+        "descripcion": "",
+        "path": "",
+        "reg_status": "activo",
+        "created_by": "developer",
+        "created_date": "2021-10-10T05:00:00.000Z",
+        "last_update_by": "developer",
+        "last_update_date": "2021-10-10T05:00:00.000Z"
+    },
+    {
+        "id_avatar": 7,
+        "nombre": "lluvia",
+        "descripcion": "",
+        "path": "",
+        "reg_status": "activo",
+        "created_by": "developer",
+        "created_date": "2021-10-10T05:00:00.000Z",
+        "last_update_by": "developer",
+        "last_update_date": "2021-10-10T05:00:00.000Z"
+    },
+    {
+        "id_avatar": 8,
+        "nombre": "florero",
+        "descripcion": "",
+        "path": "",
+        "reg_status": "activo",
+        "created_by": "developer",
+        "created_date": "2021-10-10T05:00:00.000Z",
+        "last_update_by": "developer",
+        "last_update_date": "2021-10-10T05:00:00.000Z"
+    },
+    {
+        "id_avatar": 9,
+        "nombre": "pijama",
+        "descripcion": "",
+        "path": "",
+        "reg_status": "activo",
+        "created_by": "developer",
+        "created_date": "2021-10-10T05:00:00.000Z",
+        "last_update_by": "developer",
+        "last_update_date": "2021-10-10T05:00:00.000Z"
+    },
+    {
+        "id_avatar": 10,
+        "nombre": "mago",
+        "descripcion": "",
+        "path": "",
+        "reg_status": "activo",
+        "created_by": "developer",
+        "created_date": "2021-10-10T05:00:00.000Z",
+        "last_update_by": "developer",
+        "last_update_date": "2021-10-10T05:00:00.000Z"
+    }
+]
