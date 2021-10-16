@@ -25,7 +25,7 @@ class sessionController {
                                             ce.año,
                                             ce.ciclo,
                                             e.nombre escuela,
-                                            de.id_disttribucion_escuela
+                                            de.id_distribucion_escuela
                                     FROM    usuario u,
                                             rol r ,
                                             inscripcion i,
@@ -68,7 +68,7 @@ class sessionController {
                     },
                     escuela: {
                         id_inscripcion: resp[0].id_inscripcion,
-                        id_disttribucion_escuela: resp[0].id_disttribucion_escuela,
+                        id_disttribucion_escuela: resp[0].id_distribucion_escuela,
                         escuela: resp[0].escuela,
                         grado: resp[0].grado,
                         grupo: resp[0].grupo,
