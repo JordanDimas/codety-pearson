@@ -9,9 +9,11 @@ const cors_1 = __importDefault(require("cors"));
 //errorHandler7
 const errorHandler = require('./src/helpers/errorhandler.helper');
 //routes
-const user_routes_1 = __importDefault(require("./src/routes/user.routes"));
-const session_routes_1 = __importDefault(require("./src/routes/session.routes"));
+const actividad_routes_1 = __importDefault(require("./src/routes/actividad.routes"));
 const avatar_routes_1 = __importDefault(require("./src/routes/avatar.routes"));
+const sentimientos_routes_1 = __importDefault(require("./src/routes/sentimientos.routes"));
+const session_routes_1 = __importDefault(require("./src/routes/session.routes"));
+const user_routes_1 = __importDefault(require("./src/routes/user.routes"));
 class Server {
     constructor() {
         this.app = express_1.default();
@@ -27,8 +29,10 @@ class Server {
     }
     routes() {
         //usr
-        this.app.use('/v1/session', session_routes_1.default);
+        this.app.use('/v1/actividad', actividad_routes_1.default);
         this.app.use('/v1/avatar', avatar_routes_1.default);
+        this.app.use('/v1/sentimientos', sentimientos_routes_1.default);
+        this.app.use('/v1/session', session_routes_1.default);
         this.app.use('/v1/user', user_routes_1.default);
         //Error handler
         this.app.use(errorHandler.internalServerError);

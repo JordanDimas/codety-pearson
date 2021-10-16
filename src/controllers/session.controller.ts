@@ -19,11 +19,13 @@ class sessionController {
                                             r.nombre rol, 
                                             c.nombre ciudad,
                                             p.nombre pais,
+                                            i.id_inscripcion,
                                             gra.nombre grado,
                                             gru.grupo ,
                                             ce.año,
                                             ce.ciclo,
-                                            e.nombre escuela
+                                            e.nombre escuela,
+                                            de.id_disttribucion_escuela
                                     FROM    usuario u,
                                             rol r ,
                                             inscripcion i,
@@ -55,6 +57,7 @@ class sessionController {
                 console.log("token: ", token);
 
                 let resultado = {
+                    token_usuario: token,
                     usuario: {
                         id_usuario: resp[0].id_usuario,
                         nombre: resp[0].nombre,
@@ -64,6 +67,8 @@ class sessionController {
                         rol: resp[0].rol,
                     },
                     escuela: {
+                        id_inscripcion: resp[0].id_inscripcion,
+                        id_disttribucion_escuela: resp[0].id_disttribucion_escuela,
                         escuela: resp[0].escuela,
                         grado: resp[0].grado,
                         grupo: resp[0].grupo,

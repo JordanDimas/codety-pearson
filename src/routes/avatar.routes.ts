@@ -2,7 +2,7 @@ import { Router } from "express";
 //
 import { AvatarController } from '../controllers/avatar.controller';
 
-class usrRoutes{
+class avatarRoutes{
     public router : Router = Router();
 
     constructor(){
@@ -15,6 +15,6 @@ class usrRoutes{
     }
 }
 
-const UsrRoutes = new usrRoutes();
+const AvatarRoutes = new avatarRoutes();
 
-export default UsrRoutes.router;
+export default AvatarRoutes.router;

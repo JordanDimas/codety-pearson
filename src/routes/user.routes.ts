@@ -9,7 +9,10 @@ class usrRoutes{
     }
 
     config():void{
-        this.router.put('/avatar/update',UserController.updateUserAvatar);
+        this.router.put('/avatar/update',UserController.updateAvatar);
+        this.router.get('/actividad/list',UserController.getActividadList);
+        this.router.post('/actividad/sentimiento/insert',UserController.insertSentimientoActividad);
+        
     }
 }
 

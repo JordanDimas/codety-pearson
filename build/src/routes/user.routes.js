@@ -8,7 +8,9 @@ class usrRoutes {
         this.config();
     }
     config() {
-        this.router.put('/avatar/update', user_controller_1.UserController.updateUserAvatar);
+        this.router.put('/avatar/update', user_controller_1.UserController.updateAvatar);
+        this.router.get('/actividad/list', user_controller_1.UserController.getActividadList);
+        this.router.post('/actividad/sentimiento/insert', user_controller_1.UserController.insertSentimientoActividad);
     }
 }
 const UsrRoutes = new usrRoutes();
