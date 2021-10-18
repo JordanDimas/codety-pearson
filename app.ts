@@ -1,7 +1,7 @@
 import express,{application, Application} from 'express';
 import morgan from 'morgan';
 import cors from 'cors';
-
+//ec2-18-219-57-179.us-east-2.compute.amazonaws.com:3000
 //errorHandler7
 const errorHandler = require('./src/helpers/errorhandler.helper');
 
