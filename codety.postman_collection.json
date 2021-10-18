@@ -1,0 +1,470 @@
+{
+	"info": {
+		"_postman_id": "7a569c02-8aa8-453b-8343-d6221f30390a",
+		"name": "codety",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "local",
+			"item": [
+				{
+					"name": "user",
+					"item": [
+						{
+							"name": "user_avatar_update",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id_avatar\": 3,\r\n    \"id_usuario\":1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/v1/user/avatar/update",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"v1",
+										"user",
+										"avatar",
+										"update"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "user_actividad_list",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/v1/user/actividad/list?id_inscripcion=1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"v1",
+										"user",
+										"actividad",
+										"list"
+									],
+									"query": [
+										{
+											"key": "id_inscripcion",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "user_actividad_sentimiento_insert",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id_sentimiento_inicio\": 1,\r\n    \"id_sentimiento_fin\":1,\r\n    \"id_actividad_inscripcion\":1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/v1/user/actividad/sentimiento/insert",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"v1",
+										"user",
+										"actividad",
+										"sentimiento",
+										"insert"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "avatar",
+					"item": [
+						{
+							"name": "avatar_list",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/v1/avatar/list",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"v1",
+										"avatar",
+										"list"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "sentimientos",
+					"item": [
+						{
+							"name": "sentimientos_list",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/v1/sentimientos/list",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"v1",
+										"sentimientos",
+										"list"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "actividad",
+					"item": [
+						{
+							"name": "actividad_list",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/v1/actividad/list?id_distribucion_escuela=1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"v1",
+										"actividad",
+										"list"
+									],
+									"query": [
+										{
+											"key": "id_distribucion_escuela",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "session",
+					"item": [
+						{
+							"name": "login",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nombreUsuario\":\"Jordan-1-A-2021\",\r\n    \"contraseña\":\"123456789\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/v1/session/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"v1",
+										"session",
+										"login"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "aws",
+			"item": [
+				{
+					"name": "user",
+					"item": [
+						{
+							"name": "user_avatar_update",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id_avatar\": 2,\r\n    \"id_usuario\":1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "ec2-18-219-57-179.us-east-2.compute.amazonaws.com:3000/v1/user/avatar/update",
+									"host": [
+										"ec2-18-219-57-179",
+										"us-east-2",
+										"compute",
+										"amazonaws",
+										"com"
+									],
+									"port": "3000",
+									"path": [
+										"v1",
+										"user",
+										"avatar",
+										"update"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "user_actividad_list",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "ec2-18-219-57-179.us-east-2.compute.amazonaws.com:3000/v1/user/actividad/list?id_inscripcion=1",
+									"host": [
+										"ec2-18-219-57-179",
+										"us-east-2",
+										"compute",
+										"amazonaws",
+										"com"
+									],
+									"port": "3000",
+									"path": [
+										"v1",
+										"user",
+										"actividad",
+										"list"
+									],
+									"query": [
+										{
+											"key": "id_inscripcion",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "user_actividad_sentimiento_insert",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id_sentimiento_inicio\": 1,\r\n    \"id_sentimiento_fin\":1,\r\n    \"id_actividad_inscripcion\":1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "ec2-18-219-57-179.us-east-2.compute.amazonaws.com:3000/v1/user/actividad/sentimiento/insert",
+									"host": [
+										"ec2-18-219-57-179",
+										"us-east-2",
+										"compute",
+										"amazonaws",
+										"com"
+									],
+									"port": "3000",
+									"path": [
+										"v1",
+										"user",
+										"actividad",
+										"sentimiento",
+										"insert"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "avatar",
+					"item": [
+						{
+							"name": "avatar_list",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "ec2-18-219-57-179.us-east-2.compute.amazonaws.com:3000/v1/avatar/list",
+									"host": [
+										"ec2-18-219-57-179",
+										"us-east-2",
+										"compute",
+										"amazonaws",
+										"com"
+									],
+									"port": "3000",
+									"path": [
+										"v1",
+										"avatar",
+										"list"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "sentimientos",
+					"item": [
+						{
+							"name": "sentimientos_list",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "ec2-18-219-57-179.us-east-2.compute.amazonaws.com:3000/v1/sentimientos/list",
+									"host": [
+										"ec2-18-219-57-179",
+										"us-east-2",
+										"compute",
+										"amazonaws",
+										"com"
+									],
+									"port": "3000",
+									"path": [
+										"v1",
+										"sentimientos",
+										"list"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "actividad",
+					"item": [
+						{
+							"name": "actividad_list",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "ec2-18-219-57-179.us-east-2.compute.amazonaws.com:3000/v1/actividad/list?id_distribucion_escuela=1",
+									"host": [
+										"ec2-18-219-57-179",
+										"us-east-2",
+										"compute",
+										"amazonaws",
+										"com"
+									],
+									"port": "3000",
+									"path": [
+										"v1",
+										"actividad",
+										"list"
+									],
+									"query": [
+										{
+											"key": "id_distribucion_escuela",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "session",
+					"item": [
+						{
+							"name": "session_login",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nombreUsuario\":\"Jordan-1-A-2021\",\r\n    \"contraseña\":\"123456789\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "ec2-18-219-57-179.us-east-2.compute.amazonaws.com:3000/v1/session/login",
+									"host": [
+										"ec2-18-219-57-179",
+										"us-east-2",
+										"compute",
+										"amazonaws",
+										"com"
+									],
+									"port": "3000",
+									"path": [
+										"v1",
+										"session",
+										"login"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
