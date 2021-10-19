@@ -31,6 +31,41 @@ class userController {
         }
     }
 
+    public async getAvatar(req: Request, res: Response): Promise<void> {
+        console.log(Date().toLocaleString(), " :", "User getAvatar: ", req.query);
+        const data = req.query;
+        let resp: any;
+        try {
+            resp = await pool.query(`select a.id_avatar,
+                                            a.nombre,
+                                            a.descripcion,
+                                            a.path
+                                    from    avatar a,
+                                            usuario  u
+                                    where   u.id_usuario = ? and
+                                            a.id_avatar = u.id_avatar`,
+                                     [data.id_usuario]);
+
+
+            console.log(`resp : ${JSON.stringify(resp)}`);
+
+            let response = {
+                codigo: "200.pearson.0000",
+                mensaje: "operacion exitosa",
+                folio: uuidv4(),
+                resultado: {
+                    avatar: resp[0]
+                }
+            }
+
+            res.json(response);
+        } catch (err) {
+            let dateEx = Date().toLocaleString();
+            console.log(dateEx, " :", "User getAvatar [Error]: ", err);
+            res.status(403).json({ message: 'ERROR', date: dateEx, description: err });
+        }
+    }
+
     public async insertSentimientoActividad(req: Request, res: Response): Promise<void> {
         console.log(Date().toLocaleString(), " :", "User insertSentimientoActividad: ", req.body);
         const bodyData = req.body;
@@ -122,6 +157,8 @@ class userController {
             res.status(403).json({ message: 'ERROR', date: dateEx, description: err });
         }
     }
+
+
 
 }
 

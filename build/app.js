@@ -6,6 +6,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const morgan_1 = __importDefault(require("morgan"));
 const cors_1 = __importDefault(require("cors"));
+//ec2-18-219-57-179.us-east-2.compute.amazonaws.com:3000
 //errorHandler7
 const errorHandler = require('./src/helpers/errorhandler.helper');
 //routes

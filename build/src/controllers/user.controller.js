@@ -41,6 +41,38 @@ class userController {
             }
         });
     }
+    getAvatar(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            console.log(Date().toLocaleString(), " :", "User getAvatar: ", req.query);
+            const data = req.query;
+            let resp;
+            try {
+                resp = yield database_1.default.query(`select a.id_avatar,
+                                            a.nombre,
+                                            a.descripcion,
+                                            a.path
+                                    from    avatar a,
+                                            usuario  u
+                                    where   u.id_usuario = ? and
+                                            a.id_avatar = u.id_avatar`, [data.id_usuario]);
+                console.log(`resp : ${JSON.stringify(resp)}`);
+                let response = {
+                    codigo: "200.pearson.0000",
+                    mensaje: "operacion exitosa",
+                    folio: uuid_1.v4(),
+                    resultado: {
+                        avatar: resp[0]
+                    }
+                };
+                res.json(response);
+            }
+            catch (err) {
+                let dateEx = Date().toLocaleString();
+                console.log(dateEx, " :", "User getAvatar [Error]: ", err);
+                res.status(403).json({ message: 'ERROR', date: dateEx, description: err });
+            }
+        });
+    }
     insertSentimientoActividad(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
             console.log(Date().toLocaleString(), " :", "User insertSentimientoActividad: ", req.body);
