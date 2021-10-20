@@ -6,6 +6,10 @@ require('dotenv').config({ path: '../../../.env' });
 
 class sessionController {
 
+
+
+
+    
     public async login(req: Request, res: Response): Promise<void> {
         console.log(Date().toLocaleString(), " :", "User login: ", req.body);
         const usuario = req.body;

@@ -27,6 +27,7 @@ class actividadController {
                 actividad_lista.push(aux);
             }
 
+            
             console.log(`resp : ${JSON.stringify(resp)}`);
 
             const response = {
