@@ -104,15 +104,18 @@ class actividadController {
                                              p.pregunta,
                                              p.puntos,
                                              h.alias habilidad,
-                                             i.nombre insignia
+                                             i.nombre insignia,
+                                             pt.nombre tipo_pregunta
                                     from     lectura_pregunta lp,
                                              pregunta  p,
                                              habilidad h,
-                                             insignia i
+                                             insignia i,
+                                             pregunta_tipo pt
                                     where    lp.id_lectura = ? and
                                              lp.id_pregunta = p.id_pregunta and
                                              p.id_habilidad = h.id_habilidad and
-                                             p.id_insignia = i.id_insignia `,
+                                             p.id_insignia = i.id_insignia and
+                                             p.id_pregunta_tipo = pt.id_pregunta_tipo `,
                                                 [resp[0].id_lectura]);
     
     
@@ -128,6 +131,7 @@ class actividadController {
                     puntos: list.puntos,
                     habilidad: list.habilidad,
                     insignia:  list.insignia,
+                    tipo_pregunta: list.tipo_pregunta,
                     respuestas: {}
                  }
                  preguntas.push(aux);
