@@ -1,4 +1,3 @@
-
 -- -----------------------------------------------------
 -- Schema pearson
 -- -----------------------------------------------------
@@ -325,7 +324,9 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `pearson`.`insignia` (
   `id_insignia` INT NOT NULL AUTO_INCREMENT,
-  `nombre` VARCHAR(45) NULL DEFAULT NULL,
+  `nombre` VARCHAR(400) NULL DEFAULT NULL,
+  `alias` VARCHAR(45) NULL,
+  `descripcion` VARCHAR(400) NULL,
   `reg_status` VARCHAR(45) NULL DEFAULT NULL,
   `created_by` VARCHAR(200) NULL DEFAULT NULL,
   `created_date` DATETIME NULL DEFAULT NULL,
@@ -336,18 +337,43 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `pearson`.`pregunta`
+-- Table `pearson`.`habilidad`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `pearson`.`pregunta` (
-  `id_pregunta` INT NOT NULL AUTO_INCREMENT,
+CREATE TABLE IF NOT EXISTS `pearson`.`habilidad` (
+  `id_habilidad` INT NOT NULL AUTO_INCREMENT,
+  `nombre` VARCHAR(400) NULL DEFAULT NULL,
+  `alias` VARCHAR(45) NULL,
+  `descripcion` VARCHAR(400) NULL,
   `reg_status` VARCHAR(45) NULL DEFAULT NULL,
   `created_by` VARCHAR(200) NULL DEFAULT NULL,
   `created_date` DATETIME NULL DEFAULT NULL,
   `last_update_by` VARCHAR(200) NULL DEFAULT NULL,
   `last_update_date` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `tipo` VARCHAR(45) NULL DEFAULT NULL,
-  `id_pregunta_tipo` INT NOT NULL,
   `id_insignia` INT NOT NULL,
+  PRIMARY KEY (`id_habilidad`),
+  CONSTRAINT `fk_habilidades_insignias1`
+    FOREIGN KEY (`id_insignia`)
+    REFERENCES `pearson`.`insignia` (`id_insignia`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `pearson`.`pregunta`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `pearson`.`pregunta` (
+  `id_pregunta` INT NOT NULL AUTO_INCREMENT,
+  `pregunta` VARCHAR(2000) NULL,
+  `puntos` INT NULL DEFAULT NULL,
+  `reg_status` VARCHAR(45) NULL DEFAULT NULL,
+  `created_by` VARCHAR(200) NULL DEFAULT NULL,
+  `created_date` DATETIME NULL DEFAULT NULL,
+  `last_update_by` VARCHAR(200) NULL DEFAULT NULL,
+  `last_update_date` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `id_pregunta_tipo` INT NOT NULL,
+  `id_habilidad` INT NOT NULL,
+  `id_subhabilidad` INT NOT NULL,
   PRIMARY KEY (`id_pregunta`),
   CONSTRAINT `fk_pregunta_pregunta_tipo1`
     FOREIGN KEY (`id_pregunta_tipo`)
@@ -355,8 +381,13 @@ CREATE TABLE IF NOT EXISTS `pearson`.`pregunta` (
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_pregunta_insignia1`
-    FOREIGN KEY (`id_insignia`)
-    REFERENCES `pearson`.`insignia` (`id_insignia`)
+    FOREIGN KEY (`id_habilidad`)
+    REFERENCES `pearson`.`habilidad` (`id_habilidad`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_pregunta_insignia2`
+    FOREIGN KEY (`id_subhabilidad`)
+    REFERENCES `pearson`.`habilidad` (`id_habilidad`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
@@ -368,37 +399,18 @@ ENGINE = InnoDB;
 CREATE TABLE IF NOT EXISTS `pearson`.`respuesta` (
   `id_respuesta` INT NOT NULL AUTO_INCREMENT,
   `respuesta` VARCHAR(500) NULL DEFAULT NULL,
+  `feedback` VARCHAR(400) NULL,
   `correcta` TINYINT NULL DEFAULT NULL,
   `reg_status` VARCHAR(45) NULL DEFAULT NULL,
   `created_by` VARCHAR(200) NULL DEFAULT NULL,
   `created_date` DATETIME NULL DEFAULT NULL,
   `last_update_by` VARCHAR(200) NULL DEFAULT NULL,
   `last_update_date` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id_respuesta`))
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `pearson`.`pregunta_respuesta`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `pearson`.`pregunta_respuesta` (
-  `id_pregunta_respuesta` INT NOT NULL AUTO_INCREMENT,
-  `reg_status` VARCHAR(45) NULL DEFAULT NULL,
-  `created_by` VARCHAR(200) NULL DEFAULT NULL,
-  `created_date` DATETIME NULL DEFAULT NULL,
-  `last_update_by` VARCHAR(200) NULL DEFAULT NULL,
-  `last_update_date` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `id_pregunta` INT NOT NULL,
-  `id_respuesta` INT NOT NULL,
-  PRIMARY KEY (`id_pregunta_respuesta`),
-  CONSTRAINT `fk_pregunta_respuesta_pregunta1`
+  PRIMARY KEY (`id_respuesta`),
+  CONSTRAINT `fk_respuesta_pregunta1`
     FOREIGN KEY (`id_pregunta`)
     REFERENCES `pearson`.`pregunta` (`id_pregunta`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `fk_pregunta_respuesta_respuesta1`
-    FOREIGN KEY (`id_respuesta`)
-    REFERENCES `pearson`.`respuesta` (`id_respuesta`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
@@ -468,6 +480,7 @@ CREATE TABLE IF NOT EXISTS `pearson`.`respuesta_actividad` (
   `id_respuesta_actividad` INT NOT NULL AUTO_INCREMENT,
   `respuesta_usuario` VARCHAR(500) NULL DEFAULT NULL,
   `puntos` INT NULL DEFAULT NULL,
+  `intento` INT NULL,
   `reg_status` VARCHAR(45) NULL DEFAULT NULL,
   `created_by` VARCHAR(200) NULL DEFAULT NULL,
   `created_date` DATETIME NULL DEFAULT NULL,
@@ -475,15 +488,16 @@ CREATE TABLE IF NOT EXISTS `pearson`.`respuesta_actividad` (
   `last_update_date` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `id_pregunta_respuesta` INT NOT NULL,
   `id_actividad_inscripcion` INT NOT NULL,
+  `id_respuesta` INT NOT NULL,
   PRIMARY KEY (`id_respuesta_actividad`),
-  CONSTRAINT `fk_Respuestas_Actividad_pregunta_respuesta1`
-    FOREIGN KEY (`id_pregunta_respuesta`)
-    REFERENCES `pearson`.`pregunta_respuesta` (`id_pregunta_respuesta`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
   CONSTRAINT `fk_respuesta_actividad_actividad_inscripcion1`
     FOREIGN KEY (`id_actividad_inscripcion`)
     REFERENCES `pearson`.`actividad_inscripcion` (`id_actividad_inscripcion`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_respuesta_actividad_respuesta1`
+    FOREIGN KEY (`id_respuesta`)
+    REFERENCES `pearson`.`respuesta` (`id_respuesta`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
@@ -502,7 +516,7 @@ CREATE TABLE IF NOT EXISTS `pearson`.`lectura_pregunta` (
   `last_update_date` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `id_lectura` INT NOT NULL,
   `id_pregunta` INT NOT NULL,
-  PRIMARY KEY (`id_lectura_pregunta`, `bateria`),
+  PRIMARY KEY (`id_lectura_pregunta`),
   CONSTRAINT `fk_Lectura_Pregunta_lectura1`
     FOREIGN KEY (`id_lectura`)
     REFERENCES `pearson`.`lectura` (`id_lectura`)
@@ -530,12 +544,12 @@ CREATE TABLE IF NOT EXISTS `pearson`.`sentimiento_actividad` (
   `id_sentimiento_fin` INT NOT NULL,
   `id_actividad_inscripcion` INT NOT NULL,
   PRIMARY KEY (`id_sentimiento_actividad`),
-  CONSTRAINT `fk_Sentimiento_Actividad_Sentimiento1_inicio`
+  CONSTRAINT `fk_Sentimiento_Actividad_Sentimiento1`
     FOREIGN KEY (`id_sentimiento_inicio`)
     REFERENCES `pearson`.`sentimiento` (`id_sentimiento`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
-  CONSTRAINT `fk_sentimiento_actividad_sentimiento1_fin`
+  CONSTRAINT `fk_sentimiento_actividad_sentimiento2`
     FOREIGN KEY (`id_sentimiento_fin`)
     REFERENCES `pearson`.`sentimiento` (`id_sentimiento`)
     ON DELETE NO ACTION
@@ -546,3 +560,4 @@ CREATE TABLE IF NOT EXISTS `pearson`.`sentimiento_actividad` (
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
+
