@@ -11,6 +11,10 @@ class actividadRoutes{
 
     config():void{
         this.router.get('/list',ActividadController.getActividadList);
+        this.router.get('/lectura/get',ActividadController.getLectura);
+        this.router.get('/preguntas/get',ActividadController.getPreguntas);
+
+        
 
     }
 }

@@ -1,3 +1,4 @@
+
 -- -----------------------------------------------------
 -- Schema pearson
 -- -----------------------------------------------------
@@ -374,6 +375,7 @@ CREATE TABLE IF NOT EXISTS `pearson`.`pregunta` (
   `id_pregunta_tipo` INT NOT NULL,
   `id_habilidad` INT NOT NULL,
   `id_subhabilidad` INT NOT NULL,
+  `id_insignia` INT NOT NULL,
   PRIMARY KEY (`id_pregunta`),
   CONSTRAINT `fk_pregunta_pregunta_tipo1`
     FOREIGN KEY (`id_pregunta_tipo`)
@@ -388,6 +390,11 @@ CREATE TABLE IF NOT EXISTS `pearson`.`pregunta` (
   CONSTRAINT `fk_pregunta_insignia2`
     FOREIGN KEY (`id_subhabilidad`)
     REFERENCES `pearson`.`habilidad` (`id_habilidad`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_pregunta_insignia3`
+    FOREIGN KEY (`id_insignia`)
+    REFERENCES `pearson`.`insignia` (`id_insignia`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
@@ -508,7 +515,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `pearson`.`lectura_pregunta` (
   `id_lectura_pregunta` INT NOT NULL AUTO_INCREMENT,
-  `bateria` INT NOT NULL,
+  `bateria` INT NULL,
   `reg_status` VARCHAR(45) NULL DEFAULT NULL,
   `created_by` VARCHAR(200) NULL DEFAULT NULL,
   `created_date` DATETIME NULL DEFAULT NULL,

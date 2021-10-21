@@ -5,10 +5,6 @@ import { v4 as uuidv4 } from 'uuid';
 require('dotenv').config({ path: '../../../.env' });
 
 class sessionController {
-
-
-
-
     
     public async login(req: Request, res: Response): Promise<void> {
         console.log(Date().toLocaleString(), " :", "User login: ", req.body);

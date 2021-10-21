@@ -123,10 +123,11 @@ class userController {
             const reqData = req.query;
             let resp;
             try {
-                resp = yield database_1.default.query(`SELECT ai.id_actividad_inscripcion,
+                resp = yield database_1.default.query(`SELECT a.id_actividad,
                                                 a.nombre,
                                                 a.fecha_inicio,
-                                                a.fecha_fin
+                                                a.fecha_fin,
+                                                a.status_actividad
                                         FROM    actividad_inscripcion  ai,
                                                 actividad a
                                         where   a.id_actividad = ai.id_actividad and
@@ -135,10 +136,11 @@ class userController {
                 let lista = [];
                 for (let list of resp) {
                     let aux = {
-                        id_actividad_inscripcion: list.id_actividad_inscripcion,
+                        id_actividad: list.id_actividad,
                         nombre: list.nombre,
                         fecha_inicio: list.fecha_inicio,
-                        fecha_fin: list.fecha_fin
+                        fecha_fin: list.fecha_fin,
+                        estatus_actividad: list.status_actividad
                     };
                     lista.push(aux);
                 }

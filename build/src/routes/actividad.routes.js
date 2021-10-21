@@ -10,6 +10,8 @@ class actividadRoutes {
     }
     config() {
         this.router.get('/list', actividad_controller_1.ActividadController.getActividadList);
+        this.router.get('/lectura/get', actividad_controller_1.ActividadController.getLectura);
+        this.router.get('/preguntas/get', actividad_controller_1.ActividadController.getPreguntas);
     }
 }
 const ActividadRoutes = new actividadRoutes();

@@ -11,6 +11,7 @@ import AvatarRoutes from './src/routes/avatar.routes';
 import SentimientosRoutes from './src/routes/sentimientos.routes';
 import SesionRoutes from './src/routes/session.routes';
 import UserRoutes from './src/routes/user.routes';
+import LecturaRoutes from './src/routes/lectura.routes';
 
 class Server{
 
@@ -34,6 +35,7 @@ class Server{
         //usr
         this.app.use('/v1/actividad',ActividadRoutes);
         this.app.use('/v1/avatar',AvatarRoutes);
+        this.app.use('/v1/lectura',LecturaRoutes);
         this.app.use('/v1/sentimientos',SentimientosRoutes);
         this.app.use('/v1/session',SesionRoutes);
         this.app.use('/v1/user',UserRoutes);

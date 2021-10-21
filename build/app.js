@@ -15,6 +15,7 @@ const avatar_routes_1 = __importDefault(require("./src/routes/avatar.routes"));
 const sentimientos_routes_1 = __importDefault(require("./src/routes/sentimientos.routes"));
 const session_routes_1 = __importDefault(require("./src/routes/session.routes"));
 const user_routes_1 = __importDefault(require("./src/routes/user.routes"));
+const lectura_routes_1 = __importDefault(require("./src/routes/lectura.routes"));
 class Server {
     constructor() {
         this.app = express_1.default();
@@ -32,6 +33,7 @@ class Server {
         //usr
         this.app.use('/v1/actividad', actividad_routes_1.default);
         this.app.use('/v1/avatar', avatar_routes_1.default);
+        this.app.use('/v1/lectura', lectura_routes_1.default);
         this.app.use('/v1/sentimientos', sentimientos_routes_1.default);
         this.app.use('/v1/session', session_routes_1.default);
         this.app.use('/v1/user', user_routes_1.default);
