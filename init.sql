@@ -312,15 +312,50 @@ INSERT usuario values(1,'jordan','Dimas','Hernandez','Jordan-1-A-2021','Jordan@d
 INSERT usuario values(2,'Baruch','Gonzales','Hernandez','Baruch-1-A-2021','Baruch@developer.com','123456789','activo','developer','2021-10-10','developer','2021-10-10',1,1);
 INSERT usuario values(3,'juan','cano','Martinez','usuario_prueba1','juan@developer.com','codetidy123','activo','developer','2021-10-10','developer','2021-10-10',1,1);
 INSERT usuario values(4,'fernanda','Yanez','Galindo','usuario_prueba2','fernanda@developer.com','codetidy456','activo','developer','2021-10-10','developer','2021-10-10',1,1);
+INSERT usuario values(5,'Admin01','Admin','01','Admin01','Admin01@developer.com','123456789','activo','developer','2021-10-10','developer','2021-10-10',1,1);
+INSERT usuario values(6,'Admin02','Admin','02','Admin02','Admin02@developer.com','123456789','activo','developer','2021-10-10','developer','2021-10-10',1,1);
+INSERT usuario values(7,'Admin03','Admin','03','Admin03','Admin03@developer.com','123456789','activo','developer','2021-10-10','developer','2021-10-10',1,1);
 
 INSERT inscripcion VALUES(1,'developer','activo','2021-10-10','developer','2021-10-10',1,1,1);
 INSERT inscripcion VALUES(2,'developer','activo','2021-10-10','developer','2021-10-10',1,2,2);
+INSERT inscripcion VALUES(3,'developer','activo','2021-10-10','developer','2021-10-10',1,3,1);
+INSERT inscripcion VALUES(4,'developer','activo','2021-10-10','developer','2021-10-10',1,4,2);
+INSERT inscripcion VALUES(5,'developer','activo','2021-10-10','developer','2021-10-10',1,5,1);
+INSERT inscripcion VALUES(6,'developer','activo','2021-10-10','developer','2021-10-10',1,6,2);
+INSERT inscripcion VALUES(7,'developer','activo','2021-10-10','developer','2021-10-10',1,7,1);
+
 
 INSERT actividad_inscripcion VALUES(1,'developer','activo','2021-10-10','developer','2021-10-10',1,1);
 INSERT actividad_inscripcion VALUES(2,'developer','activo','2021-10-10','developer','2021-10-10',1,2);
 INSERT actividad_inscripcion VALUES(3,'developer','activo','2021-10-10','developer','2021-10-10',1,3);
 INSERT actividad_inscripcion VALUES(4,'developer','activo','2021-10-10','developer','2021-10-10',1,4);
+
 INSERT actividad_inscripcion VALUES(5,'developer','activo','2021-10-10','developer','2021-10-10',2,1);
 INSERT actividad_inscripcion VALUES(6,'developer','activo','2021-10-10','developer','2021-10-10',2,2);
 INSERT actividad_inscripcion VALUES(7,'developer','activo','2021-10-10','developer','2021-10-10',2,3);
 INSERT actividad_inscripcion VALUES(8,'developer','activo','2021-10-10','developer','2021-10-10',2,4);
+
+INSERT actividad_inscripcion VALUES(9,'developer','activo','2021-10-10','developer','2021-10-10',3,1);
+INSERT actividad_inscripcion VALUES(10,'developer','activo','2021-10-10','developer','2021-10-10',3,2);
+INSERT actividad_inscripcion VALUES(11,'developer','activo','2021-10-10','developer','2021-10-10',3,3);
+INSERT actividad_inscripcion VALUES(12,'developer','activo','2021-10-10','developer','2021-10-10',3,4);
+
+INSERT actividad_inscripcion VALUES(13,'developer','activo','2021-10-10','developer','2021-10-10',4,1);
+INSERT actividad_inscripcion VALUES(14,'developer','activo','2021-10-10','developer','2021-10-10',4,2);
+INSERT actividad_inscripcion VALUES(15,'developer','activo','2021-10-10','developer','2021-10-10',4,3);
+INSERT actividad_inscripcion VALUES(16,'developer','activo','2021-10-10','developer','2021-10-10',4,4);
+
+INSERT actividad_inscripcion VALUES(17,'developer','activo','2021-10-10','developer','2021-10-10',5,1);
+INSERT actividad_inscripcion VALUES(18,'developer','activo','2021-10-10','developer','2021-10-10',5,2);
+INSERT actividad_inscripcion VALUES(19,'developer','activo','2021-10-10','developer','2021-10-10',5,3);
+INSERT actividad_inscripcion VALUES(20,'developer','activo','2021-10-10','developer','2021-10-10',5,4);
+
+INSERT actividad_inscripcion VALUES(21,'developer','activo','2021-10-10','developer','2021-10-10',6,1);
+INSERT actividad_inscripcion VALUES(22,'developer','activo','2021-10-10','developer','2021-10-10',6,2);
+INSERT actividad_inscripcion VALUES(23,'developer','activo','2021-10-10','developer','2021-10-10',6,3);
+INSERT actividad_inscripcion VALUES(24,'developer','activo','2021-10-10','developer','2021-10-10',6,4);
+
+INSERT actividad_inscripcion VALUES(25,'developer','activo','2021-10-10','developer','2021-10-10',7,1);
+INSERT actividad_inscripcion VALUES(26,'developer','activo','2021-10-10','developer','2021-10-10',7,2);
+INSERT actividad_inscripcion VALUES(27,'developer','activo','2021-10-10','developer','2021-10-10',7,3);
+INSERT actividad_inscripcion VALUES(28,'developer','activo','2021-10-10','developer','2021-10-10',7,4);
