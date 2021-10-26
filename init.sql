@@ -359,3 +359,6 @@ INSERT actividad_inscripcion VALUES(25,'developer','activo','2021-10-10','develo
 INSERT actividad_inscripcion VALUES(26,'developer','activo','2021-10-10','developer','2021-10-10',7,2);
 INSERT actividad_inscripcion VALUES(27,'developer','activo','2021-10-10','developer','2021-10-10',7,3);
 INSERT actividad_inscripcion VALUES(28,'developer','activo','2021-10-10','developer','2021-10-10',7,4);
+
+
+

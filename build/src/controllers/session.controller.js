@@ -60,7 +60,34 @@ class sessionController {
                                             i.id_ciclo_escolar = ce.id_ciclo_escolar and
                                             u.nombre_usuario = ? and 
                                             u.contraseña = ?`, [[req.body.nombreUsuario], [req.body.contraseña]]);
+                let qry1 = `select  insi.id_insignia,
+                                insi.nombre,
+                                insi.alias,
+                                sum(ra.puntos) total
+                        from    inscripcion insc,
+                                actividad_inscripcion ai, 
+                                respuesta_actividad ra,
+                                pregunta p,
+                                insignia insi
+                        WHERE   insc.id_inscripcion = ai.id_inscripcion and
+                                ai.id_actividad_inscripcion = ra.id_actividad_inscripcion and 
+                                ra.id_pregunta = p.id_pregunta and 
+                                p.id_insignia = insi.id_insignia and
+                                insc.id_inscripcion  = ${resp[0].id_inscripcion}
+                                GROUP BY insi.nombre`;
+                let resp1 = yield database_1.default.query(qry1);
                 console.log(`resp : ${JSON.stringify(resp)}`);
+                console.log(`resp1 : ${JSON.stringify(resp1)}`);
+                let lista_insignia = [];
+                for (let list of resp1) {
+                    let aux = {
+                        id_insignia: list.id_insignia,
+                        nombre: list.nombre,
+                        alias: list.alias,
+                        total: list.total
+                    };
+                    lista_insignia.push(aux);
+                }
                 if (resp.length > 0) {
                     const token = generateAccesToken(usuario);
                     console.log("token: ", token);
@@ -85,17 +112,7 @@ class sessionController {
                             ciudad: resp[0].ciudad,
                             pais: resp[0].pais,
                         },
-                        insignias: [{
-                                id_insignia: 1,
-                                nombre: "comprension lectora",
-                                alias: "corazon",
-                                cantidad: 50
-                            }, {
-                                id_insignia: 2,
-                                nombre: "categoria 2",
-                                alias: "corona",
-                                cantidad: 200
-                            }]
+                        insignias: lista_insignia
                     };
                     const response = {
                         codigo: "200.pearson.0000",

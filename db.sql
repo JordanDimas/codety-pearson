@@ -62,12 +62,10 @@ CREATE TABLE IF NOT EXISTS `pearson`.`usuario` (
   `id_rol` INT NOT NULL,
   `id_avatar` INT NOT NULL,
   PRIMARY KEY (`id_usuario`),
-  CONSTRAINT `fk_Usuario_Rol`
     FOREIGN KEY (`id_rol`)
     REFERENCES `pearson`.`rol` (`id_rol`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
-  CONSTRAINT `fk_Usuario_avatar1`
     FOREIGN KEY (`id_avatar`)
     REFERENCES `pearson`.`avatar` (`id_avatar`)
     ON DELETE NO ACTION
@@ -152,7 +150,6 @@ CREATE TABLE IF NOT EXISTS `pearson`.`ciudad` (
   `last_update_date` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `id_pais` INT NOT NULL,
   PRIMARY KEY (`id_ciudad`),
-  CONSTRAINT `fk_ciudad_pais1`
     FOREIGN KEY (`id_pais`)
     REFERENCES `pearson`.`pais` (`id_pais`)
     ON DELETE NO ACTION
@@ -173,7 +170,6 @@ CREATE TABLE IF NOT EXISTS `pearson`.`escuela` (
   `last_update_date` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `id_ciudad` INT NOT NULL,
   PRIMARY KEY (`id_escuela`),
-  CONSTRAINT `fk_escuela_ciudad1`
     FOREIGN KEY (`id_ciudad`)
     REFERENCES `pearson`.`ciudad` (`id_ciudad`)
     ON DELETE NO ACTION
@@ -195,17 +191,14 @@ CREATE TABLE IF NOT EXISTS `pearson`.`distribucion_escuela` (
   `id_escuela` INT NOT NULL,
   `id_grado` INT NOT NULL,
   PRIMARY KEY (`id_distribucion_escuela`),
-  CONSTRAINT `fk_distribucion_escuela_grupo1`
     FOREIGN KEY (`id_grupo`)
     REFERENCES `pearson`.`grupo` (`id_grupo`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
-  CONSTRAINT `fk_distribucion_escuela_escuela1`
     FOREIGN KEY (`id_escuela`)
     REFERENCES `pearson`.`escuela` (`id_escuela`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
-  CONSTRAINT `fk_distribucion_escuela_grado1`
     FOREIGN KEY (`id_grado`)
     REFERENCES `pearson`.`grado` (`id_grado`)
     ON DELETE NO ACTION
@@ -227,17 +220,14 @@ CREATE TABLE IF NOT EXISTS `pearson`.`inscripcion` (
   `id_usuario` INT NOT NULL,
   `id_distribucion_escuela` INT NOT NULL,
   PRIMARY KEY (`id_inscripcion`),
-  CONSTRAINT `fk_Inscripcion_Ciclo_Escolar1`
     FOREIGN KEY (`id_ciclo_escolar`)
     REFERENCES `pearson`.`ciclo_escolar` (`id_ciclo_escolar`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
-  CONSTRAINT `fk_Inscripcion_Usuario1`
     FOREIGN KEY (`id_usuario`)
     REFERENCES `pearson`.`usuario` (`id_usuario`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
-  CONSTRAINT `fk_inscripcion_distribucion_escuela1`
     FOREIGN KEY (`id_distribucion_escuela`)
     REFERENCES `pearson`.`distribucion_escuela` (`id_distribucion_escuela`)
     ON DELETE NO ACTION
@@ -291,12 +281,10 @@ CREATE TABLE IF NOT EXISTS `pearson`.`lectura_grado` (
   `id_grado` INT NOT NULL,
   `id_lectura` INT NOT NULL,
   PRIMARY KEY (`id_lectura_grado`),
-  CONSTRAINT `fk_Lectura_Grado_Grado1`
     FOREIGN KEY (`id_grado`)
     REFERENCES `pearson`.`grado` (`id_grado`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
-  CONSTRAINT `fk_Lectura_Grado_lectura1`
     FOREIGN KEY (`id_lectura`)
     REFERENCES `pearson`.`lectura` (`id_lectura`)
     ON DELETE NO ACTION
@@ -352,7 +340,6 @@ CREATE TABLE IF NOT EXISTS `pearson`.`habilidad` (
   `last_update_date` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `id_insignia` INT NOT NULL,
   PRIMARY KEY (`id_habilidad`),
-  CONSTRAINT `fk_habilidades_insignias1`
     FOREIGN KEY (`id_insignia`)
     REFERENCES `pearson`.`insignia` (`id_insignia`)
     ON DELETE NO ACTION
@@ -377,22 +364,18 @@ CREATE TABLE IF NOT EXISTS `pearson`.`pregunta` (
   `id_subhabilidad` INT NOT NULL,
   `id_insignia` INT NOT NULL,
   PRIMARY KEY (`id_pregunta`),
-  CONSTRAINT `fk_pregunta_pregunta_tipo1`
     FOREIGN KEY (`id_pregunta_tipo`)
     REFERENCES `pearson`.`pregunta_tipo` (`id_pregunta_tipo`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
-  CONSTRAINT `fk_pregunta_insignia1`
     FOREIGN KEY (`id_habilidad`)
     REFERENCES `pearson`.`habilidad` (`id_habilidad`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
-  CONSTRAINT `fk_pregunta_insignia2`
     FOREIGN KEY (`id_subhabilidad`)
     REFERENCES `pearson`.`habilidad` (`id_habilidad`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
-  CONSTRAINT `fk_pregunta_insignia3`
     FOREIGN KEY (`id_insignia`)
     REFERENCES `pearson`.`insignia` (`id_insignia`)
     ON DELETE NO ACTION
@@ -415,7 +398,6 @@ CREATE TABLE IF NOT EXISTS `pearson`.`respuesta` (
   `last_update_date` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `id_pregunta` INT NOT NULL,
   PRIMARY KEY (`id_respuesta`),
-  CONSTRAINT `fk_respuesta_pregunta1`
     FOREIGN KEY (`id_pregunta`)
     REFERENCES `pearson`.`pregunta` (`id_pregunta`)
     ON DELETE NO ACTION
@@ -441,12 +423,10 @@ CREATE TABLE IF NOT EXISTS `pearson`.`actividad` (
   `id_lectura` INT NOT NULL,
   `id_distribucion_escuela` INT NOT NULL,
   PRIMARY KEY (`id_actividad`),
-  CONSTRAINT `fk_actividad_lectura1`
     FOREIGN KEY (`id_lectura`)
     REFERENCES `pearson`.`lectura` (`id_lectura`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
-  CONSTRAINT `fk_actividad_distribucion_escuela1`
     FOREIGN KEY (`id_distribucion_escuela`)
     REFERENCES `pearson`.`distribucion_escuela` (`id_distribucion_escuela`)
     ON DELETE NO ACTION
@@ -467,12 +447,10 @@ CREATE TABLE IF NOT EXISTS `pearson`.`actividad_inscripcion` (
   `id_inscripcion` INT NOT NULL,
   `id_actividad` INT NOT NULL,
   PRIMARY KEY (`id_actividad_inscripcion`),
-  CONSTRAINT `fk_actividad_inscripcion_inscripcion1`
     FOREIGN KEY (`id_inscripcion`)
     REFERENCES `pearson`.`inscripcion` (`id_inscripcion`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
-  CONSTRAINT `fk_actividad_inscripcion_actividad1`
     FOREIGN KEY (`id_actividad`)
     REFERENCES `pearson`.`actividad` (`id_actividad`)
     ON DELETE NO ACTION
@@ -496,15 +474,18 @@ CREATE TABLE IF NOT EXISTS `pearson`.`respuesta_actividad` (
   `id_pregunta_respuesta` INT NOT NULL,
   `id_actividad_inscripcion` INT NOT NULL,
   `id_respuesta` INT NOT NULL,
+  `id_pregunta` INT NOT NULL,
   PRIMARY KEY (`id_respuesta_actividad`),
-  CONSTRAINT `fk_respuesta_actividad_actividad_inscripcion1`
     FOREIGN KEY (`id_actividad_inscripcion`)
     REFERENCES `pearson`.`actividad_inscripcion` (`id_actividad_inscripcion`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
-  CONSTRAINT `fk_respuesta_actividad_respuesta1`
     FOREIGN KEY (`id_respuesta`)
     REFERENCES `pearson`.`respuesta` (`id_respuesta`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+    FOREIGN KEY (`id_pregunta`)
+    REFERENCES `pearson`.`pregunta` (`id_pregunta`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
@@ -524,12 +505,10 @@ CREATE TABLE IF NOT EXISTS `pearson`.`lectura_pregunta` (
   `id_lectura` INT NOT NULL,
   `id_pregunta` INT NOT NULL,
   PRIMARY KEY (`id_lectura_pregunta`),
-  CONSTRAINT `fk_Lectura_Pregunta_lectura1`
     FOREIGN KEY (`id_lectura`)
     REFERENCES `pearson`.`lectura` (`id_lectura`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
-  CONSTRAINT `fk_Lectura_Pregunta_pregunta1`
     FOREIGN KEY (`id_pregunta`)
     REFERENCES `pearson`.`pregunta` (`id_pregunta`)
     ON DELETE NO ACTION
@@ -551,17 +530,14 @@ CREATE TABLE IF NOT EXISTS `pearson`.`sentimiento_actividad` (
   `id_sentimiento_fin` INT NOT NULL,
   `id_actividad_inscripcion` INT NOT NULL,
   PRIMARY KEY (`id_sentimiento_actividad`),
-  CONSTRAINT `fk_Sentimiento_Actividad_Sentimiento1`
     FOREIGN KEY (`id_sentimiento_inicio`)
     REFERENCES `pearson`.`sentimiento` (`id_sentimiento`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
-  CONSTRAINT `fk_sentimiento_actividad_sentimiento2`
     FOREIGN KEY (`id_sentimiento_fin`)
     REFERENCES `pearson`.`sentimiento` (`id_sentimiento`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
-  CONSTRAINT `fk_sentimiento_actividad_actividad_inscripcion1`
     FOREIGN KEY (`id_actividad_inscripcion`)
     REFERENCES `pearson`.`actividad_inscripcion` (`id_actividad_inscripcion`)
     ON DELETE NO ACTION

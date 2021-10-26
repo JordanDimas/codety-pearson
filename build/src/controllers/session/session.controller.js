@@ -25,38 +25,38 @@ class sessionController {
             let resp;
             try {
                 resp = yield database_1.default.query(`SELECT u.nombre,
-                                            u.apellido_paterno apelllidoPaterno,
-                                            u.apellido_materno apellidoMaterno,
-                                            u.nombre_usuario nombreUsuario,
-                                            r.nombre rol, 
-                                            c.nombre ciudad,
-                                            p.nombre pais,
-                                            gra.nombre grado,
-                                            gru.grupo ,
-                                            ce.año,
-                                            ce.ciclo,
-                                            e.nombre escuela
-                                    FROM    usuario u,
-                                            rol r ,
-                                            inscripcion i,
-                                            ciudad c,
-                                            pais p,
-                                            grado gra,
-                                            grupo gru,
-                                            ciclo_escolar ce,
-                                            escuela e,
-                                            distribucion_escuela de
-                                    WHERE   r.id_rol = u.id_rol and
-                                            u.id_usuario = i.id_usuario and
-                                            p.id_pais = c.id_pais and
-                                            i.id_distribucion_escuela = de.id_distribucion_escuela and
-                                            de.id_grupo = gru.id_grupo and
-                                            de.id_escuela = e.id_escuela and
-                                            e.id_ciudad = c.id_ciudad and
-                                            de.id_grado = gra.id_grado and
-                                            i.id_ciclo_escolar = ce.id_ciclo_escolar and
-                                            u.nombre_usuario = ? and 
-                                            u.contraseña = ?`, [[req.body.nombreUsuario], [req.body.contraseña]]);
+                                                                u.apellido_paterno apelllidoPaterno,
+                                                                u.apellido_materno apellidoMaterno,
+                                                                u.nombre_usuario nombreUsuario,
+                                                                r.nombre rol, 
+                                                                c.nombre ciudad,
+                                                                p.nombre pais,
+                                                                gra.nombre grado,
+                                                                gru.grupo ,
+                                                                ce.año,
+                                                                ce.ciclo,
+                                                                e.nombre escuela
+                                                        FROM    usuario u,
+                                                                rol r ,
+                                                                inscripcion i,
+                                                                ciudad c,
+                                                                pais p,
+                                                                grado gra,
+                                                                grupo gru,
+                                                                ciclo_escolar ce,
+                                                                escuela e,
+                                                                distribucion_escuela de
+                                                        WHERE   r.id_rol = u.id_rol and
+                                                                u.id_usuario = i.id_usuario and
+                                                                p.id_pais = c.id_pais and
+                                                                i.id_distribucion_escuela = de.id_distribucion_escuela and
+                                                                de.id_grupo = gru.id_grupo and
+                                                                de.id_escuela = e.id_escuela and
+                                                                e.id_ciudad = c.id_ciudad and
+                                                                de.id_grado = gra.id_grado and
+                                                                i.id_ciclo_escolar = ce.id_ciclo_escolar and
+                                                                u.nombre_usuario = ? and 
+                                                                u.contraseña = ?`, [[req.body.nombreUsuario], [req.body.contraseña]]);
                 console.log(`resp : ${JSON.stringify(resp)}`);
                 if (resp.length > 0) {
                     const token = generateAccesToken(usuario);

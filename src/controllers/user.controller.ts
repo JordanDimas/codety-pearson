@@ -120,6 +120,7 @@ class userController {
         let resp: any;
         try {
             resp = await pool.query(`SELECT a.id_actividad,
+                                            ai.id_actividad_inscripcion,
                                                 a.nombre,
                                                 a.fecha_inicio,
                                                 a.fecha_fin,
@@ -135,6 +136,7 @@ class userController {
             for (let list of resp) {
                 let aux = {
                     id_actividad: list.id_actividad,
+                    id_actividad_inscripcion: list.id_actividad_inscripcion,
                     nombre: list.nombre,
                     fecha_inicio: list.fecha_inicio,
                     fecha_fin: list.fecha_fin,

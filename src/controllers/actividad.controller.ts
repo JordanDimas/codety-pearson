@@ -184,6 +184,10 @@ class actividadController {
             res.status(403).json({ message: 'ERROR', date: dateEx, description: err });
         }
     }
+
+    
+
+
 }
 
 export const ActividadController = new actividadController();

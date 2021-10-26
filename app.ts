@@ -8,10 +8,11 @@ const errorHandler = require('./src/helpers/errorhandler.helper');
 //routes
 import ActividadRoutes from './src/routes/actividad.routes';
 import AvatarRoutes from './src/routes/avatar.routes';
+import LecturaRoutes from './src/routes/lectura.routes';
+import RespuestaRoutes from './src/routes/respuesta.routes';
 import SentimientosRoutes from './src/routes/sentimientos.routes';
 import SesionRoutes from './src/routes/session.routes';
 import UserRoutes from './src/routes/user.routes';
-import LecturaRoutes from './src/routes/lectura.routes';
 
 class Server{
 
@@ -36,6 +37,7 @@ class Server{
         this.app.use('/v1/actividad',ActividadRoutes);
         this.app.use('/v1/avatar',AvatarRoutes);
         this.app.use('/v1/lectura',LecturaRoutes);
+        this.app.use('/v1/respuesta',RespuestaRoutes);
         this.app.use('/v1/sentimientos',SentimientosRoutes);
         this.app.use('/v1/session',SesionRoutes);
         this.app.use('/v1/user',UserRoutes);
