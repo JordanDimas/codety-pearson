@@ -23,11 +23,11 @@ class actividadController {
                     fecha_fin: list.fecha_fin,
                     bateria: list.bateria,
                     status_actividad: list.status_actividad
-                }
+                };
                 actividad_lista.push(aux);
             }
 
-            
+
             console.log(`resp : ${JSON.stringify(resp)}`);
 
             const response = {
@@ -44,7 +44,7 @@ class actividadController {
             res.status(403).json({ message: 'ERROR', date: dateEx, description: err });
         }
     }
-    
+
     public async getLectura(req: Request, res: Response): Promise<void> {
         console.log(Date().toLocaleString(), " :", "lectura getLectura: ", req.query);
         const data = req.query;
@@ -58,7 +58,7 @@ class actividadController {
                                             actividad  a
                                     where   a.id_actividad = ? and
                                             l.id_lectura = a.id_lectura`,
-                                     [data.id_actividad]);
+                [data.id_actividad]);
 
 
             console.log(`resp : ${JSON.stringify(resp)}`);
@@ -70,7 +70,7 @@ class actividadController {
                 resultado: {
                     lectura: resp[0]
                 }
-            }
+            };
 
             res.json(response);
         } catch (err) {
@@ -95,11 +95,11 @@ class actividadController {
                                             actividad  a
                                     where   a.id_actividad = ? and
                                             l.id_lectura = a.id_lectura`,
-                                                [data.id_actividad]);
-    
-    
+                [data.id_actividad]);
+
+
             console.log(`resp : ${JSON.stringify(resp)}`);
-    
+
             resp2 = await pool.query(`select p.id_pregunta,
                                              p.pregunta,
                                              p.puntos,
@@ -115,30 +115,31 @@ class actividadController {
                                              lp.id_pregunta = p.id_pregunta and
                                              p.id_habilidad = h.id_habilidad and
                                              p.id_insignia = i.id_insignia and
-                                             p.id_pregunta_tipo = pt.id_pregunta_tipo `,
-                                                [resp[0].id_lectura]);
-    
-    
+                                             p.id_pregunta_tipo = pt.id_pregunta_tipo 
+                                             order by p.id_pregunta asc`,
+                [resp[0].id_lectura]);
+
+
             console.log(`resp : ${JSON.stringify(resp2)}`);
-    
+
             let preguntas = [];
-            
-            for(let list of resp2){
-    
+
+            for (let list of resp2) {
+
                 let aux = {
-                    id_pregunta: list.id_pregunta, 
+                    id_pregunta: list.id_pregunta,
                     pregunta: list.pregunta,
                     puntos: list.puntos,
                     habilidad: list.habilidad,
-                    insignia:  list.insignia,
+                    insignia: list.insignia,
                     tipo_pregunta: list.tipo_pregunta,
                     respuestas: {}
-                 }
-                 preguntas.push(aux);
-             }
-    
-             for(let pregunta of preguntas){
-    
+                };
+                preguntas.push(aux);
+            }
+
+            for (let pregunta of preguntas) {
+
                 resp3 = await pool.query(`select r.id_respuesta,
                                                  p.id_pregunta,
                                                  r.respuesta,
@@ -148,26 +149,26 @@ class actividadController {
                                                  respuesta  r
                             where                p.id_pregunta = ? and
                                                  p.id_pregunta = r.id_pregunta`,
-                                                       [pregunta.id_pregunta]);
-    
-                                console.log(`resp : ${JSON.stringify(resp3)}`);
-    
-    
+                    [pregunta.id_pregunta]);
+
+                console.log(`resp : ${JSON.stringify(resp3)}`);
+
+
                 let respuestas = [];
-    
-                for(let respuesta of resp3){
+
+                for (let respuesta of resp3) {
                     let aux2 = {
                         id_respuesta: respuesta.id_respuesta,
                         respuesta: respuesta.respuesta,
                         feedback: respuesta.feedback,
                         correcta: respuesta.correcta
-                    }
+                    };
                     respuestas.push(aux2);
                 }
-    
+
                 pregunta.respuestas = respuestas;
-             }
-    
+            }
+
             let response = {
                 codigo: "200.pearson.0000",
                 mensaje: "operacion exitosa",
@@ -175,8 +176,8 @@ class actividadController {
                 resultado: {
                     preguntas: preguntas
                 }
-            }
-    
+            };
+
             res.json(response);
         } catch (err) {
             let dateEx = Date().toLocaleString();
@@ -184,9 +185,6 @@ class actividadController {
             res.status(403).json({ message: 'ERROR', date: dateEx, description: err });
         }
     }
-
-    
-
 
 }
 
