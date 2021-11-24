@@ -56,7 +56,7 @@ INSERT habilidad values(11,'','RI','','activo','developer','2021-10-10','develop
 INSERT habilidad values(12,'','RL','','activo','developer','2021-10-10','developer','2021-10-10',1);
 
 INSERT pregunta values(1,'Si un granjero trabaja en la granja, un barquero trabaja en _______________.',1,'activo','developer','2021-10-10','developer','2021-10-10',1,11,12,1);
-INSERT pregunta values(2,'En la siguiente oración, ¿qué significa la palabra resaltada? Los patos, gallos y gallinas coinciden en que tienen plumas.',1,'activo','developer','2021-10-10','developer','2021-10-10',1,11,12,1);
+INSERT pregunta values(2,'En la siguiente oración, ¿qué significa la palabra resaltada? Los patos, gallos y gallinas {bold}:[coinciden] en que tienen plumas.',1,'activo','developer','2021-10-10','developer','2021-10-10',1,11,12,1);
 INSERT pregunta values(3,'La primera idea importante de esta lectura es que podemos organizar elementos por los aspectos en los que coinciden. ¿En qué párrafo está esa información?',1,'activo','developer','2021-10-10','developer','2021-10-10',1,11,11,1);
 INSERT pregunta values(4,'¿En qué párrafo puedes encontrar la definición de “conjunto”?',1,'activo','developer','2021-10-10','developer','2021-10-10',1,11,11,1);
 INSERT pregunta values(5,'¿Cuáles son las palabras más importantes del quinto párrafo?',1,'activo','developer','2021-10-10','developer','2021-10-10',1,11,11,1);
@@ -279,7 +279,7 @@ INSERT respuesta values(133,'((ILUSTRACIÓN: CL_G1_B1_S16_RI22_NAT_De panza02 vi
 INSERT respuesta values(134,'((ILUSTRACIÓN: CL_G1_B1_S16_RI22_NAT_De panza03 viñeta de Un sombrero))','El poema nunca dice que usara sombrero. ',0,'activo','developer','2021-10-10','developer','2021-10-10',36);
 INSERT respuesta values(135,'((ILUSTRACIÓN: CL_G1_B1_S16_RI22_NAT_De panza04 Viñeta de Una roca))','La lagartija se subía a una roca para tomar el Sol, no se escondía debajo de ella.',0,'activo','developer','2021-10-10','developer','2021-10-10',36);
 INSERT respuesta values(136,'También usaría una hoja.','Una hoja puede proteger a la lagartija, pero no a ti porque eres mucho más grande que ella. ',0,'activo','developer','2021-10-10','developer','2021-10-10',37);
-INSERT respuesta values(137,'Me pondría protector solar.','¡Muy bien! Los bloqueadores protegen contra los rayos Solares, mientras aprovechas los beneficios de asolearte. ',1,'activo','developer','2021-10-10','developer','2021-10-10',37);
+INSERT respuesta values(137,'Me pondría protector solar.','¡Muy bien! Los bloqueadores protegen contra los rayos solares, mientras aprovechas los beneficios de asolearte. ',1,'activo','developer','2021-10-10','developer','2021-10-10',37);
 INSERT respuesta values(138,'No saldría de la casa.','Si no sales de casa, no podrás disfrutar los beneficios del Sol como lo hace la lagartija.',0,'activo','developer','2021-10-10','developer','2021-10-10',37);
 INSERT respuesta values(139,'Tomaría mucha agua.','Aunque es bueno tomar agua mientras te asoleas, la lagartija quería protegerse de los rayos del Sol. ',0,'activo','developer','2021-10-10','developer','2021-10-10',37);
 INSERT respuesta values(140,'Las iguanas son amigas de las lindas lagartijas.','Aunque en estos versos se mencionan a las lagartijas, también se habla de las iguanas que no aparece en el poema.',0,'activo','developer','2021-10-10','developer','2021-10-10',38);

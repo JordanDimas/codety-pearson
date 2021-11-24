@@ -10,6 +10,8 @@ DROP SCHEMA IF EXISTS `pearson` ;
 CREATE SCHEMA IF NOT EXISTS `pearson` DEFAULT CHARACTER SET utf8 ;
 USE `pearson` ;
 
+USE pearson;
+
 -- -----------------------------------------------------
 -- Table `pearson`.`rol`
 -- -----------------------------------------------------
