@@ -1,4 +1,4 @@
-USE pearson;
+USE pearsonqa;
 
 INSERT pais values(1,'activo','developer','2021-10-10','developer','2021-10-10','México');
 
