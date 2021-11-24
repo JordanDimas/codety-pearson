@@ -25,7 +25,7 @@ class Server{
     }
 
     config(): void{
-        this.app.set('port',process.env.PORT || 3000);
+        this.app.set('port',process.env.PORT || 3001);
         this.app.use(morgan(' status: :status | metodo: :method | fecha: :date[iso] | path: :url | ejecucion: :total-time[3] ms '));
         this.app.use(cors());
         this.app.use(express.json());
