@@ -24,7 +24,8 @@ class Server {
         this.routes();
     }
     config() {
-        this.app.set('port', process.env.PORT || 3001);
+        //this.app.set('port',process.env.PORT || 3000);//qa
+        this.app.set('port', process.env.PORT || 3001); //dev
         this.app.use(morgan_1.default(' status: :status | metodo: :method | fecha: :date[iso] | path: :url | ejecucion: :total-time[3] ms '));
         this.app.use(cors_1.default());
         this.app.use(express_1.default.json());
@@ -32,13 +33,13 @@ class Server {
     }
     routes() {
         //usr
-        this.app.use('/dev/v1/actividad', actividad_routes_1.default);
-        this.app.use('/dev/v1/avatar', avatar_routes_1.default);
-        this.app.use('/dev/v1/lectura', lectura_routes_1.default);
-        this.app.use('/dev/v1/respuesta', respuesta_routes_1.default);
-        this.app.use('/dev/v1/sentimientos', sentimientos_routes_1.default);
-        this.app.use('/dev/v1/session', session_routes_1.default);
-        this.app.use('/dev/v1/user', user_routes_1.default);
+        this.app.use('/v1/actividad', actividad_routes_1.default);
+        this.app.use('/v1/avatar', avatar_routes_1.default);
+        this.app.use('/v1/lectura', lectura_routes_1.default);
+        this.app.use('/v1/respuesta', respuesta_routes_1.default);
+        this.app.use('/v1/sentimientos', sentimientos_routes_1.default);
+        this.app.use('/v1/session', session_routes_1.default);
+        this.app.use('/v1/user', user_routes_1.default);
         //Error handler
         this.app.use(errorHandler.internalServerError);
         this.app.use(errorHandler.notFound);

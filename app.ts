@@ -25,7 +25,8 @@ class Server{
     }
 
     config(): void{
-        this.app.set('port',process.env.PORT || 3001);
+        //this.app.set('port',process.env.PORT || 3000);//qa
+        this.app.set('port',process.env.PORT || 3001);//dev
         this.app.use(morgan(' status: :status | metodo: :method | fecha: :date[iso] | path: :url | ejecucion: :total-time[3] ms '));
         this.app.use(cors());
         this.app.use(express.json());
@@ -34,13 +35,13 @@ class Server{
 
     routes(): void{
         //usr
-        this.app.use('/dev/v1/actividad',ActividadRoutes);
-        this.app.use('/dev/v1/avatar',AvatarRoutes);
-        this.app.use('/dev/v1/lectura',LecturaRoutes);
-        this.app.use('/dev/v1/respuesta',RespuestaRoutes);
-        this.app.use('/dev/v1/sentimientos',SentimientosRoutes);
-        this.app.use('/dev/v1/session',SesionRoutes);
-        this.app.use('/dev/v1/user',UserRoutes);
+        this.app.use('/v1/actividad',ActividadRoutes);
+        this.app.use('/v1/avatar',AvatarRoutes);
+        this.app.use('/v1/lectura',LecturaRoutes);
+        this.app.use('/v1/respuesta',RespuestaRoutes);
+        this.app.use('/v1/sentimientos',SentimientosRoutes);
+        this.app.use('/v1/session',SesionRoutes);
+        this.app.use('/v1/user',UserRoutes);
 
         //Error handler
         this.app.use(errorHandler.internalServerError);
