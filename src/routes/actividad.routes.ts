@@ -1,6 +1,7 @@
 import { Router } from "express";
 //
 import { ActividadController } from '../controllers/actividad.controller';
+const {isLogged} = require("../middleware/auth.middleware");
 
 class actividadRoutes{
     public router : Router = Router();
@@ -10,9 +11,9 @@ class actividadRoutes{
     }
 
     config():void{
-        this.router.get('/list',ActividadController.getActividadList);
-        this.router.get('/lectura/get',ActividadController.getLectura);
-        this.router.get('/preguntas/get',ActividadController.getPreguntas);
+        this.router.get('/list',isLogged,ActividadController.getActividadList);
+        this.router.get('/lectura/get',isLogged,ActividadController.getLectura);
+        this.router.get('/preguntas/get',isLogged,ActividadController.getPreguntas);
 
         
 

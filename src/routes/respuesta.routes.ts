@@ -1,7 +1,7 @@
 import { Router } from "express";
 //
 import { RespuestaController } from '../controllers/respuesta.controller';
-
+const {isLogged} = require("../middleware/auth.middleware");
 class respuestaRoutes{
     public router : Router = Router();
 
@@ -10,7 +10,7 @@ class respuestaRoutes{
     }
 
     config():void{
-        this.router.post('/actividad/set',RespuestaController.setRespuesta);
+        this.router.post('/actividad/set',isLogged,RespuestaController.setRespuesta);
 
     }
     

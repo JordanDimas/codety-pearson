@@ -1,4 +1,4 @@
-USE pearsonqa;
+USE pearson;
 
 INSERT pais values(1,'activo','developer','2021-10-10','developer','2021-10-10','México');
 
@@ -316,6 +316,9 @@ INSERT usuario values(4,'fernanda','Yanez','Galindo','usuario_prueba2','fernanda
 INSERT usuario values(5,'Admin01','Admin','01','Admin01','Admin01@developer.com','123456789','activo','developer','2021-10-10','developer','2021-10-10',1,1);
 INSERT usuario values(6,'Admin02','Admin','02','Admin02','Admin02@developer.com','123456789','activo','developer','2021-10-10','developer','2021-10-10',1,1);
 INSERT usuario values(7,'Admin03','Admin','03','Admin03','Admin03@developer.com','123456789','activo','developer','2021-10-10','developer','2021-10-10',1,1);
+INSERT usuario values(8,'CDL001','Pearson','01','CDL_Pearson001','CDL_Pearson001@developer.com','cdlpearson01!','activo','developer','2021-10-10','developer','2021-10-10',1,1);
+INSERT usuario values(9,'CDL002','Pearson','02','CDL_Pearson002','CDL_Pearson002@developer.com','cdlpearson02!','activo','developer','2021-10-10','developer','2021-10-10',1,1);
+INSERT usuario values(10,'CDL003','Pearson','03','CDL_Pearson003','CDL_Pearson003@developer.com','cdlpearson03!','activo','developer','2021-10-10','developer','2021-10-10',1,1);
 
 INSERT inscripcion VALUES(1,'developer','activo','2021-10-10','developer','2021-10-10',1,1,1);
 INSERT inscripcion VALUES(2,'developer','activo','2021-10-10','developer','2021-10-10',1,2,2);
@@ -324,6 +327,9 @@ INSERT inscripcion VALUES(4,'developer','activo','2021-10-10','developer','2021-
 INSERT inscripcion VALUES(5,'developer','activo','2021-10-10','developer','2021-10-10',1,5,1);
 INSERT inscripcion VALUES(6,'developer','activo','2021-10-10','developer','2021-10-10',1,6,2);
 INSERT inscripcion VALUES(7,'developer','activo','2021-10-10','developer','2021-10-10',1,7,1);
+INSERT inscripcion VALUES(8,'developer','activo','2021-10-10','developer','2021-10-10',1,8,2);
+INSERT inscripcion VALUES(9,'developer','activo','2021-10-10','developer','2021-10-10',1,9,1);
+INSERT inscripcion VALUES(10,'developer','activo','2021-10-10','developer','2021-10-10',1,10,2);
 
 
 INSERT actividad_inscripcion VALUES(1,'developer','activo','2021-10-10','developer','2021-10-10',1,1);
@@ -361,5 +367,19 @@ INSERT actividad_inscripcion VALUES(26,'developer','activo','2021-10-10','develo
 INSERT actividad_inscripcion VALUES(27,'developer','activo','2021-10-10','developer','2021-10-10',7,3);
 INSERT actividad_inscripcion VALUES(28,'developer','activo','2021-10-10','developer','2021-10-10',7,4);
 
+INSERT actividad_inscripcion VALUES(29,'developer','activo','2021-10-10','developer','2021-10-10',8,1);
+INSERT actividad_inscripcion VALUES(30,'developer','activo','2021-10-10','developer','2021-10-10',8,2);
+INSERT actividad_inscripcion VALUES(31,'developer','activo','2021-10-10','developer','2021-10-10',8,3);
+INSERT actividad_inscripcion VALUES(32,'developer','activo','2021-10-10','developer','2021-10-10',8,4);
+
+INSERT actividad_inscripcion VALUES(33,'developer','activo','2021-10-10','developer','2021-10-10',9,1);
+INSERT actividad_inscripcion VALUES(34,'developer','activo','2021-10-10','developer','2021-10-10',9,2);
+INSERT actividad_inscripcion VALUES(35,'developer','activo','2021-10-10','developer','2021-10-10',9,3);
+INSERT actividad_inscripcion VALUES(36,'developer','activo','2021-10-10','developer','2021-10-10',9,4);
+
+INSERT actividad_inscripcion VALUES(37,'developer','activo','2021-10-10','developer','2021-10-10',10,1);
+INSERT actividad_inscripcion VALUES(38,'developer','activo','2021-10-10','developer','2021-10-10',10,2);
+INSERT actividad_inscripcion VALUES(39,'developer','activo','2021-10-10','developer','2021-10-10',10,3);
+INSERT actividad_inscripcion VALUES(40,'developer','activo','2021-10-10','developer','2021-10-10',10,4);
 
 

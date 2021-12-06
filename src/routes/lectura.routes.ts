@@ -1,7 +1,7 @@
 import { Router } from "express";
 //
 import { LecturaController } from '../controllers/lectura.controller';
-
+const {isLogged} = require("../middleware/auth.middleware");
 class lecturaRoutes{
     public router : Router = Router();
 
@@ -10,7 +10,7 @@ class lecturaRoutes{
     }
 
     config():void{
-        this.router.get('/list',LecturaController.getLecturaList);
+        this.router.get('/list',isLogged,LecturaController.getLecturaList);
 
     }
 }

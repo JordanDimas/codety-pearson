@@ -1,6 +1,7 @@
 import { Router } from "express";
 //
 import { SentimientosController } from '../controllers/sentimientos.controller';
+const {isLogged} = require("../middleware/auth.middleware");
 
 class sentimientosRoutes{
     public router : Router = Router();
@@ -10,7 +11,7 @@ class sentimientosRoutes{
     }
 
     config():void{
-        this.router.get('/list',SentimientosController.getSentimientosList);
+        this.router.get('/list',isLogged,SentimientosController.getSentimientosList);
 
     }
 }

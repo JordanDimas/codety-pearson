@@ -1,112 +1,504 @@
-[
-    {
-        "id_avatar": 1,
-        "nombre": "jardinero",
-        "descripcion": "",
-        "path": "",
-        "reg_status": "activo",
-        "created_by": "developer",
-        "created_date": "2021-10-10T05:00:00.000Z",
-        "last_update_by": "developer",
-        "last_update_date": "2021-10-10T05:00:00.000Z"
-    },
-    {
-        "id_avatar": 2,
-        "nombre": "matematico",
-        "descripcion": "",
-        "path": "",
-        "reg_status": "activo",
-        "created_by": "developer",
-        "created_date": "2021-10-10T05:00:00.000Z",
-        "last_update_by": "developer",
-        "last_update_date": "2021-10-10T05:00:00.000Z"
-    },
-    {
-        "id_avatar": 3,
-        "nombre": "fotografo",
-        "descripcion": "",
-        "path": "",
-        "reg_status": "activo",
-        "created_by": "developer",
-        "created_date": "2021-10-10T05:00:00.000Z",
-        "last_update_by": "developer",
-        "last_update_date": "2021-10-10T05:00:00.000Z"
-    },
-    {
-        "id_avatar": 4,
-        "nombre": "astronauta",
-        "descripcion": "",
-        "path": "",
-        "reg_status": "activo",
-        "created_by": "developer",
-        "created_date": "2021-10-10T05:00:00.000Z",
-        "last_update_by": "developer",
-        "last_update_date": "2021-10-10T05:00:00.000Z"
-    },
-    {
-        "id_avatar": 5,
-        "nombre": "pirata",
-        "descripcion": "",
-        "path": "",
-        "reg_status": "activo",
-        "created_by": "developer",
-        "created_date": "2021-10-10T05:00:00.000Z",
-        "last_update_by": "developer",
-        "last_update_date": "2021-10-10T05:00:00.000Z"
-    },
-    {
-        "id_avatar": 6,
-        "nombre": "pintor",
-        "descripcion": "",
-        "path": "",
-        "reg_status": "activo",
-        "created_by": "developer",
-        "created_date": "2021-10-10T05:00:00.000Z",
-        "last_update_by": "developer",
-        "last_update_date": "2021-10-10T05:00:00.000Z"
-    },
-    {
-        "id_avatar": 7,
-        "nombre": "lluvia",
-        "descripcion": "",
-        "path": "",
-        "reg_status": "activo",
-        "created_by": "developer",
-        "created_date": "2021-10-10T05:00:00.000Z",
-        "last_update_by": "developer",
-        "last_update_date": "2021-10-10T05:00:00.000Z"
-    },
-    {
-        "id_avatar": 8,
-        "nombre": "florero",
-        "descripcion": "",
-        "path": "",
-        "reg_status": "activo",
-        "created_by": "developer",
-        "created_date": "2021-10-10T05:00:00.000Z",
-        "last_update_by": "developer",
-        "last_update_date": "2021-10-10T05:00:00.000Z"
-    },
-    {
-        "id_avatar": 9,
-        "nombre": "pijama",
-        "descripcion": "",
-        "path": "",
-        "reg_status": "activo",
-        "created_by": "developer",
-        "created_date": "2021-10-10T05:00:00.000Z",
-        "last_update_by": "developer",
-        "last_update_date": "2021-10-10T05:00:00.000Z"
-    },
-    {
-        "id_avatar": 10,
-        "nombre": "mago",
-        "descripcion": "",
-        "path": "",
-        "reg_status": "activo",
-        "created_by": "developer",
-        "created_date": "2021-10-10T05:00:00.000Z",
-        "last_update_by": "developer",
-        "last_update_date": "2021-10-10T05:00:00.000Z"
+//------------------------------------------------------------------------------
+{
+    "idCliente": "988e4000649545e9ab2ce455cb62b57e",
+    "idPedido": "S-59971710",
+    "estatus": "aprobado",
+    "fechaCompra": "26/11/2021 2: 11 AM",
+    "fechaEntrega": "26/11/2021 2: 11 AM",
+    "nombreCompletoReceptor": "Martin Balam",
+    "productos": [
+        {
+            "nombre": "Consola Xbox Series S 512GB",
+            "precioFinal": 7999,
+            "pagoSemanal": 156,
+            "descuentoPagoSemanal": 133,
+            "plazo": 102,
+            "urlImagen": "https: //elektra.vteximg.com.br/arquivos/ids/3255853/3022886.jpg?v=637721546456270000"
+        }
+    ],
+    "direccionEntrega": {
+        "calle": "Esquina C 59 Kohunlich Y C 44 Benito Juarez",
+        "numeroExterior": "59",
+        "numeroInterior": "",
+        "colonia": "CENTRO",
+        "municipio": "JOSE MA. MORELOS",
+        "codigoPostal": "77890",
+        "entidadFederativa": "QUINTANA ROO",
+        "pais": "MEXICO",
+        "alias": "Casa",
+        "referencia":"Frente Bicentenario,
+ Mera esquina"},
+    "contacto": {
+            "correo": "AZ1316.1@GMAIL.COM",
+            "numeroCelular": "9995291326"
+        },
+        "ultimoPedido": true
     }
-]
+    //------------------------------------------------------------------------------
+    {
+        "idCliente": "54342aed820944be92d9432369ed6ae5",
+        "idPedido": "S-32202382",
+        "estatus": "aprobado",
+        "fechaCompra": "26/11/2021 10: 53 AM",
+        "fechaEntrega": "26/11/2021 10: 53 AM",
+        "nombreCompletoReceptor": "MARTIN CHAVEZ LEYVA",
+        "productos": [
+            {
+                "nombre": "Pantalla LED TCL 50 Pulgadas 4K Smart 50A445",
+                "precioFinal": 8799,
+                "pagoSemanal": 174,
+                "descuentoPagoSemanal": 149,
+                "plazo": 102,
+                "urlImagen": "https: //elektra.vteximg.com.br/arquivos/ids/3011285/1009547.jpg?v=637553339120570000"
+            }
+        ],
+        "direccionEntrega": {
+            "calle": "TULIPANES",
+            "numeroExterior": "23",
+            "numeroInterior": null,
+            "colonia": "AMPLIACION LAZARO CARDENAS",
+            "municipio": "TEMIXCO",
+            "codigoPostal": "62080",
+            "entidadFederativa": "MORELOS",
+            "pais": "1",
+            "alias": "predefinida",
+            "referencia": "porton blanco barda color guinda "
+        },
+        "contacto": {
+            "correo": "chavezleivamartin@gmail.com",
+            "numeroCelular": "7774678750"
+        },
+        "ultimoPedido": true
+    }
+    //------------------------------------------------------------------------------
+    {
+        "idCliente": "90813f3316144e5b93b30313b7a58289",
+        "idPedido": "S-6917680",
+        "estatus": "aprobado",
+        "fechaCompra": "26/11/2021 12: 54 PM",
+        "fechaEntrega": "26/11/2021 12: 54 PM",
+        "nombreCompletoReceptor": "David Cerda",
+        "productos": [
+            {
+                "nombre": "Consola Xbox Series S 512GB",
+                "precioFinal": 7999,
+                "pagoSemanal": 156,
+                "descuentoPagoSemanal": 133,
+                "plazo": 102,
+                "urlImagen": "https: //elektra.vteximg.com.br/arquivos/ids/3255853/3022886.jpg?v=637721546456270000"
+            }
+        ],
+        "direccionEntrega": {
+            "calle": "Guerrero ",
+            "numeroExterior": "158",
+            "numeroInterior": "L 2 ",
+            "colonia": "BUENAVISTA",
+            "municipio": "CUAUHTEMOC",
+            "codigoPostal": "06350",
+            "entidadFederativa": "CIUDAD DE MEXICO",
+            "pais": "MEXICO",
+            "alias": "casa",
+            "referencia": "metro guerrero a dos cuadras "
+        },
+        "contacto": {
+            "correo": "disenomancera@gmail.com",
+            "numeroCelular": "5539849353"
+        },
+        "ultimoPedido": true
+    }
+    //------------------------------------------------------------------------------
+    {
+        "idCliente": "15afa4d03b264615b457d0b988f900c3",
+        "idPedido": "S-31725112",
+        "estatus": "aprobado",
+        "fechaCompra": "26/11/2021 3: 34 PM",
+        "fechaEntrega": "26/11/2021 3: 34 PM",
+        "nombreCompletoReceptor": "Alejandro Pacheco",
+        "productos": [
+            {
+                "nombre": "Samsung Galaxy A22 128GB Negro",
+                "precioFinal": 3999,
+                "pagoSemanal": 86,
+                "descuentoPagoSemanal": 73,
+                "plazo": 108,
+                "urlImagen": "https: //elektra.vteximg.com.br/arquivos/ids/3235362/31048057.jpg?v=637703442612370000"
+            }
+        ],
+        "direccionEntrega": {
+            "calle": "calz vallejo",
+            "numeroExterior": "1307",
+            "numeroInterior": "Mz vlll edf L dep 20",
+            "colonia": "NUEVA INDUSTRIAL VALLEJO",
+            "municipio": "GUSTAVO A. MADERO",
+            "codigoPostal": "07700",
+            "entidadFederativa": "CIUDAD DE MEXICO",
+            "pais": "MEXICO",
+            "alias": "casa",
+            "referencia": "departamentos"
+        },
+        "contacto": {
+            "correo": "pertstile@gmail.com",
+            "numeroCelular": "5625954872"
+        },
+        "ultimoPedido": true
+    }
+    //------------------------------------------------------------------------------
+    {
+        "idCliente": "dacd83363c0d4f86b821d1c43abec18a",
+        "idPedido": "S-50101739",
+        "estatus": "aprobado",
+        "fechaCompra": "27/11/2021 12: 56 PM",
+        "fechaEntrega": "27/11/2021 12: 56 PM",
+        "nombreCompletoReceptor": "ana",
+        "productos": [
+            {
+                "nombre": "Samsung Galaxy A22 128GB Negro",
+                "precioFinal": 3999,
+                "pagoSemanal": 105,
+                "descuentoPagoSemanal": 89,
+                "plazo": 72,
+                "urlImagen": "https: //elektra.vteximg.com.br/arquivos/ids/3235362/31048057.jpg?v=637703442612370000"
+            }
+        ],
+        "direccionEntrega": {
+            "calle": "santa Cecilia ",
+            "numeroExterior": "75",
+            "numeroInterior": "",
+            "colonia": "SANTA CECILIA",
+            "municipio": "ZAPOTLANEJO",
+            "codigoPostal": "45430",
+            "entidadFederativa": "JALISCO",
+            "pais": "MEXICO",
+            "alias": "jaime torres bodet ",
+            "referencia": "letrero por fuera"
+        },
+        "contacto": {
+            "correo": "kelly30picis@gmail.com",
+            "numeroCelular": "3313628866"
+        },
+        "ultimoPedido": true
+    }
+    //------------------------------------------------------------------------------
+    {
+        "idCliente": "b4435d290d1b494299be870ca4917a6f",
+        "idPedido": "S-19704469",
+        "estatus": "aprobado",
+        "fechaCompra": "27/11/2021 1: 0 PM",
+        "fechaEntrega": "27/11/2021 1: 0 PM",
+        "nombreCompletoReceptor": "Monica guzman",
+        "productos": [
+            {
+                "nombre": "Motorola Moto G9 Play 64 GB Azul Electrico + Audifonos",
+                "precioFinal": 4599,
+                "pagoSemanal": 99,
+                "descuentoPagoSemanal": 84,
+                "plazo": 108,
+                "urlImagen": "https: //elektra.vteximg.com.br/arquivos/ids/2643917/31042911.jpg?v=637372680977930000"
+            }
+        ],
+        "direccionEntrega": {
+            "calle": "cook",
+            "numeroExterior": "70",
+            "numeroInterior": "",
+            "colonia": "EUZKADI",
+            "municipio": "AZCAPOTZALCO",
+            "codigoPostal": "02660",
+            "entidadFederativa": "CIUDAD DE MEXICO",
+            "pais": "MEXICO",
+            "alias": "casa",
+            "referencia": "a lado de la tienda"
+        },
+        "contacto": {
+            "correo": "dayanlopzvarg@gmail.com",
+            "numeroCelular": "5558054243"
+        },
+        "ultimoPedido": true
+    }
+    //------------------------------------------------------------------------------
+    {
+        "idCliente": "dacd83363c0d4f86b821d1c43abec18a",
+        "idPedido": "S-50101150",
+        "estatus": "aprobado",
+        "fechaCompra": "27/11/2021 1: 24 PM",
+        "fechaEntrega": "27/11/2021 1: 24 PM",
+        "nombreCompletoReceptor": "ana",
+        "productos": [
+            {
+                "nombre": "Motorola Moto G9 Play 64 GB Azul Electrico + Audifonos",
+                "precioFinal": 4599,
+                "pagoSemanal": 103,
+                "descuentoPagoSemanal": 87,
+                "plazo": 96,
+                "urlImagen": "https: //elektra.vteximg.com.br/arquivos/ids/2643917/31042911.jpg?v=637372680977930000"
+            }
+        ],
+        "direccionEntrega": {
+            "calle": "santa Cecilia ",
+            "numeroExterior": "75",
+            "numeroInterior": "",
+            "colonia": "SANTA CECILIA",
+            "municipio": "ZAPOTLANEJO",
+            "codigoPostal": "45430",
+            "entidadFederativa": "JALISCO",
+            "pais": "MEXICO",
+            "alias": "jaime torres bodet ",
+            "referencia": "letrero por fuera"
+        },
+        "contacto": {
+            "correo": "kelly30picis@gmail.com",
+            "numeroCelular": "3313628866"
+        },
+        "ultimoPedido": true
+    }
+    //------------------------------------------------------------------------------
+    {
+        "idCliente": "bb69588fa7fb44b686e39ef625b5bda2",
+        "idPedido": "S-179783",
+        "estatus": "aprobado",
+        "fechaCompra": "27/11/2021 5: 8 PM",
+        "fechaEntrega": "27/11/2021 5: 8 PM",
+        "nombreCompletoReceptor": "PABLO HERNANDEZ NEGRETE",
+        "productos": [
+            {
+                "nombre": "Pantalla LED TCL 50 Pulgadas 4K Smart 50A445",
+                "precioFinal": 8799,
+                "pagoSemanal": 166,
+                "descuentoPagoSemanal": 140,
+                "plazo": 102,
+                "urlImagen": "https: //elektra.vteximg.com.br/arquivos/ids/3011285/1009547.jpg?v=637553339120570000"
+            }
+        ],
+        "direccionEntrega": {
+            "calle": "PASEO DEL ZAPOTE",
+            "numeroExterior": "226B",
+            "numeroInterior": null,
+            "colonia": "SAN CAYETANO",
+            "municipio": "IRAPUATO",
+            "codigoPostal": "36687",
+            "entidadFederativa": "GUANAJUATO",
+            "pais": "1",
+            "alias": "predefinida",
+            "referencia": "tabique cafe "
+        },
+        "contacto": {
+            "correo": "hernandeznegretepablo@gmail.com",
+            "numeroCelular": "4623527441"
+        },
+        "ultimoPedido": true
+    }
+    //------------------------------------------------------------------------------
+    {
+        "idCliente": "6e229bcafb2a4a6bb866fac554eb5287",
+        "idPedido": "S-61619548",
+        "estatus": "aprobado",
+        "fechaCompra": "27/11/2021 8: 39 PM",
+        "fechaEntrega": "27/11/2021 8: 39 PM",
+        "nombreCompletoReceptor": "DAVID HERNANDEZ TORRES",
+        "productos": [
+            {
+                "nombre": "Samsung Galaxy A22 128GB Negro",
+                "precioFinal": 3999,
+                "pagoSemanal": 86,
+                "descuentoPagoSemanal": 73,
+                "plazo": 108,
+                "urlImagen": "https: //elektra.vteximg.com.br/arquivos/ids/3235362/31048057.jpg?v=637703442612370000"
+            }
+        ],
+        "direccionEntrega": {
+            "calle": "AV DEL CANAL",
+            "numeroExterior": "MZ359",
+            "numeroInterior": "LT 9",
+            "colonia": "SAN MARTIN TEPETLIXPAN",
+            "municipio": "CUAUTITLAN IZCALLI",
+            "codigoPostal": "54763",
+            "entidadFederativa": "MEXICO",
+            "pais": "1",
+            "alias": "predefinida",
+            "referencia": "Casa de dos niveles porton negro"
+        },
+        "contacto": {
+            "correo": "latinrumba01@gmail.com",
+            "numeroCelular": "5575553022"
+        },
+        "ultimoPedido": true
+    }
+    //------------------------------------------------------------------------------
+    {
+        "idCliente": "8da0ead6248a4eecad6b3908dffa9696",
+        "idPedido": "S-535772540",
+        "estatus": "aprobado",
+        "fechaCompra": "27/11/2021 9: 2 PM",
+        "fechaEntrega": "27/11/2021 9: 2 PM",
+        "nombreCompletoReceptor": "FIDEL LUNA TAPIA",
+        "productos": [
+            {
+                "nombre": "Motorola Moto G9 Play 64 GB Azul Electrico + Audifonos",
+                "precioFinal": 4599,
+                "pagoSemanal": 99,
+                "descuentoPagoSemanal": 84,
+                "plazo": 108,
+                "urlImagen": "https: //elektra.vteximg.com.br/arquivos/ids/2643917/31042911.jpg?v=637372680977930000"
+            }
+        ],
+        "direccionEntrega": {
+            "calle": "CERRADA NOGAL SILVESTRE",
+            "numeroExterior": "20",
+            "numeroInterior": "",
+            "colonia": "PUEBLO NUEVO ALTO",
+            "municipio": "MAGDALENA CONTRERAS",
+            "codigoPostal": "10640",
+            "entidadFederativa": "CIUDAD DE MEXICO",
+            "pais": "1",
+            "alias": "predefinida",
+            "referencia":"fachada rustica,
+ puerta de herreria"},
+    "contacto": {
+                "correo": "foresttop144@gmail.com",
+                "numeroCelular": "5565607948"
+            },
+            "ultimoPedido": true
+        }
+        //------------------------------------------------------------------------------
+        {
+            "idCliente": "697ec4aeeb524bfeb268bf4fa66041f3",
+            "idPedido": "S-40283752",
+            "estatus": "aprobado",
+            "fechaCompra": "28/11/2021 10: 19 AM",
+            "fechaEntrega": "28/11/2021 10: 19 AM",
+            "nombreCompletoReceptor": "Jose Carlos Cervantes",
+            "productos": [
+                {
+                    "nombre": "OPPO Reno 5 Lite 128GB Desbloqueado - Negro",
+                    "precioFinal": 6999,
+                    "pagoSemanal": 150,
+                    "descuentoPagoSemanal": 128,
+                    "plazo": 108,
+                    "urlImagen": "https: //elektra.vteximg.com.br/arquivos/ids/2972108/31044908.jpg?v=637535262810170000"
+                }
+            ],
+            "direccionEntrega": {
+                "calle": "tezontle",
+                "numeroExterior": "21",
+                "numeroInterior": "sn",
+                "colonia": "LA COLINA INFONAVIT",
+                "municipio": "MORELIA",
+                "codigoPostal": "58140",
+                "entidadFederativa": "MICHOACAN DE OCAMPO",
+                "pais": "MEXICO",
+                "alias": "OFICINA",
+                "referencia": "subiendo escaleras puerta izquierda"
+            },
+            "contacto": {
+                "correo": "MONDRAGONMENDOZA999010@GMAIL.COM",
+                "numeroCelular": "3334028087"
+            },
+            "ultimoPedido": true
+        }
+        //------------------------------------------------------------------------------
+        {
+            "idCliente": "697ec4aeeb524bfeb268bf4fa66041f3",
+            "idPedido": "S-40283261",
+            "estatus": "aprobado",
+            "fechaCompra": "28/11/2021 10: 21 AM",
+            "fechaEntrega": "28/11/2021 10: 21 AM",
+            "nombreCompletoReceptor": "Jose Carlos Cervantes",
+            "productos": [
+                {
+                    "nombre": "Motorola Moto G60 128GB Desbloqueado - Dorado",
+                    "precioFinal": 6499,
+                    "pagoSemanal": 139,
+                    "descuentoPagoSemanal": 118,
+                    "plazo": 108,
+                    "urlImagen": "https: //elektra.vteximg.com.br/arquivos/ids/2989546/31045254.jpg?v=637544496491670000"
+                }
+            ],
+            "direccionEntrega": {
+                "calle": "tezontle",
+                "numeroExterior": "21",
+                "numeroInterior": "sn",
+                "colonia": "LA COLINA INFONAVIT",
+                "municipio": "MORELIA",
+                "codigoPostal": "58140",
+                "entidadFederativa": "MICHOACAN DE OCAMPO",
+                "pais": "MEXICO",
+                "alias": "OFICINA",
+                "referencia": "subiendo escaleras puerta izquierda"
+            },
+            "contacto": {
+                "correo": "MONDRAGONMENDOZA999010@GMAIL.COM",
+                "numeroCelular": "3334028087"
+            },
+            "ultimoPedido": true
+        }
+        //------------------------------------------------------------------------------
+        {
+            "idCliente": "697ec4aeeb524bfeb268bf4fa66041f3",
+            "idPedido": "S-40283749",
+            "estatus": "aprobado",
+            "fechaCompra": "28/11/2021 10: 23 AM",
+            "fechaEntrega": "28/11/2021 10: 23 AM",
+            "nombreCompletoReceptor": "Jose Carlos Cervantes",
+            "productos": [
+                {
+                    "nombre": "Samsung A12 64GB Desbloqueado Negro",
+                    "precioFinal": 3499,
+                    "pagoSemanal": 79,
+                    "descuentoPagoSemanal": 67,
+                    "plazo": 96,
+                    "urlImagen": "https: //elektra.vteximg.com.br/arquivos/ids/3253695/31048969.jpg?v=637720750893030000"
+                }
+            ],
+            "direccionEntrega": {
+                "calle": "tezontle",
+                "numeroExterior": "21",
+                "numeroInterior": "sn",
+                "colonia": "LA COLINA INFONAVIT",
+                "municipio": "MORELIA",
+                "codigoPostal": "58140",
+                "entidadFederativa": "MICHOACAN DE OCAMPO",
+                "pais": "MEXICO",
+                "alias": "OFICINA",
+                "referencia": "subiendo escaleras puerta izquierda"
+            },
+            "contacto": {
+                "correo": "MONDRAGONMENDOZA999010@GMAIL.COM",
+                "numeroCelular": "3334028087"
+            },
+            "ultimoPedido": true
+        }
+        //------------------------------------------------------------------------------
+        {
+            "idCliente": "a8d5655eea0b4a289e1a89a67fa1b585",
+            "idPedido": "S-11578890",
+            "estatus": "aprobado",
+            "fechaCompra": "28/11/2021 10: 55 PM",
+            "fechaEntrega": "28/11/2021 10: 55 PM",
+            "nombreCompletoReceptor": "carlos alberto",
+            "productos": [
+                {
+                    "nombre": "Motorola Moto G9 Play 64 GB Azul Electrico + Audifonos",
+                    "precioFinal": 4599,
+                    "pagoSemanal": 99,
+                    "descuentoPagoSemanal": 84,
+                    "plazo": 108,
+                    "urlImagen": "https: //elektra.vteximg.com.br/arquivos/ids/2643917/31042911.jpg?v=637372680977930000"
+                }
+            ],
+            "direccionEntrega": {
+                "calle": "tezontle",
+                "numeroExterior": "21",
+                "numeroInterior": "0",
+                "colonia": "LA COLINA INFONAVIT",
+                "municipio": "MORELIA",
+                "codigoPostal": "58140",
+                "entidadFederativa": "MICHOACAN DE OCAMPO",
+                "pais": "MEXICO",
+                "alias": "OFICINA",
+                "referencia": "subiendo escaleras puerta izquierda"
+            },
+            "contacto": {
+                "correo": "luisalberto999010@gmail.com",
+                "numeroCelular": "4438618413"
+            },
+            "ultimoPedido": true
+        }

@@ -1,6 +1,7 @@
 import { Router } from "express";
 //
 import { AvatarController } from '../controllers/avatar.controller';
+const {isLogged} = require("../middleware/auth.middleware");
 
 class avatarRoutes{
     public router : Router = Router();
@@ -10,7 +11,7 @@ class avatarRoutes{
     }
 
     config():void{
-        this.router.get('/list',AvatarController.getAvatarList);
+        this.router.get('/list',isLogged,AvatarController.getAvatarList);
 
     }
 }
