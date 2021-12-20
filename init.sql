@@ -1,4 +1,4 @@
-USE pearson;
+USE pearsonqa;
 
 INSERT pais values(1,'activo','developer','2021-10-10','developer','2021-10-10','México');
 
@@ -9,6 +9,12 @@ INSERT grupo values(1,'A','primero','activo','developer','2021-10-10','developer
 INSERT grupo values(2,'B','segundo','activo','developer','2021-10-10','developer','2021-10-10');
 
 INSERT ciclo_escolar values(1,'2021',1,'2021-10-10','2022-10-10','activo','developer','2021-10-10','developer','2021-10-10');
+
+INSERT categoria_lectura values(1,'Matematicas','','activo','developer','2021-10-10','developer','2021-10-10');
+INSERT categoria_lectura values(2,'Geogolia','','activo','developer','2021-10-10','developer','2021-10-10');
+INSERT categoria_lectura values(3,'Español','','activo','developer','2021-10-10','developer','2021-10-10');
+INSERT categoria_lectura values(4,'Valores','','activo','developer','2021-10-10','developer','2021-10-10');
+INSERT categoria_lectura values(5,'Respeto','','activo','developer','2021-10-10','developer','2021-10-10');
 
 INSERT avatar values(1,'jardinero','','','activo','developer','2021-10-10','developer','2021-10-10');
 INSERT avatar values(2,'matemático','','','activo','developer','2021-10-10','developer','2021-10-10');
@@ -28,10 +34,21 @@ INSERT sentimiento values(4,'calmado','','activo','developer','2021-10-10','deve
 INSERT sentimiento values(5,'feliz','','activo','developer','2021-10-10','developer','2021-10-10');
 INSERT sentimiento values(6,'entusiasmado','','activo','developer','2021-10-10','developer','2021-10-10');
 
-INSERT lectura values(1,'Fix el Elefante','','','activo','developer','2021-10-10','developer','2021-10-10');
-INSERT lectura values(2,'Conjuntos','','','activo','developer','2021-10-10','developer','2021-10-10');
-INSERT lectura values(3,'De panza pa riba','','','activo','developer','2021-10-10','developer','2021-10-10');
-INSERT lectura values(4,'Una Regla Para todos','','','activo','developer','2021-10-10','developer','2021-10-10');
+INSERT lectura values(1,'Fix el Elefante','','','activo','developer','2021-10-10','developer','2021-10-10',3);
+INSERT lectura values(2,'Conjuntos','','','activo','developer','2021-10-10','developer','2021-10-10',3);
+INSERT lectura values(3,'De panza pa riba','','','activo','developer','2021-10-10','developer','2021-10-10',3);
+INSERT lectura values(4,'Una Regla Para todos','','','activo','developer','2021-10-10','developer','2021-10-10',3);
+
+INSERT lectura_grado values(1,'activo','developer','2021-10-10','developer','2021-10-10',1,1);
+INSERT lectura_grado values(2,'activo','developer','2021-10-10','developer','2021-10-10',1,2);
+INSERT lectura_grado values(3,'activo','developer','2021-10-10','developer','2021-10-10',1,3);
+INSERT lectura_grado values(4,'activo','developer','2021-10-10','developer','2021-10-10',1,4);
+
+INSERT lectura_grado values(5,'activo','developer','2021-10-10','developer','2021-10-10',2,1);
+INSERT lectura_grado values(6,'activo','developer','2021-10-10','developer','2021-10-10',2,2);
+INSERT lectura_grado values(7,'activo','developer','2021-10-10','developer','2021-10-10',2,3);
+INSERT lectura_grado values(8,'activo','developer','2021-10-10','developer','2021-10-10',2,4);
+
 
 INSERT rol values(1,'alumno','alumno en curso','activo','developer','2021-10-10','developer','2021-10-10');
 

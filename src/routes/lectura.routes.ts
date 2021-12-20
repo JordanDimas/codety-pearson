@@ -11,6 +11,9 @@ class lecturaRoutes{
 
     config():void{
         this.router.get('/list',isLogged,LecturaController.getLecturaList);
+        this.router.get('/search',isLogged,LecturaController.getLecturaSearch);
+
+        
 
     }
 }
