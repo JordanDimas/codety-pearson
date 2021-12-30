@@ -10,11 +10,13 @@ INSERT grupo values(2,'B','segundo','activo','developer','2021-10-10','developer
 
 INSERT ciclo_escolar values(1,'2021',1,'2021-10-10','2022-10-10','activo','developer','2021-10-10','developer','2021-10-10');
 
-INSERT categoria_lectura values(1,'Matematicas','','activo','developer','2021-10-10','developer','2021-10-10');
-INSERT categoria_lectura values(2,'Geogolia','','activo','developer','2021-10-10','developer','2021-10-10');
-INSERT categoria_lectura values(3,'Español','','activo','developer','2021-10-10','developer','2021-10-10');
-INSERT categoria_lectura values(4,'Valores','','activo','developer','2021-10-10','developer','2021-10-10');
-INSERT categoria_lectura values(5,'Respeto','','activo','developer','2021-10-10','developer','2021-10-10');
+INSERT categoria_lectura values(1,'Funcional','Funcional','activo','developer','2021-10-10','developer','2021-10-10');
+INSERT categoria_lectura values(2,'Ciencias naturales','Ciencias naturales','activo','developer','2021-10-10','developer','2021-10-10');
+INSERT categoria_lectura values(3,'Arte','Arte','activo','developer','2021-10-10','developer','2021-10-10');
+INSERT categoria_lectura values(4,'Lengua materna','Lengua materna','activo','developer','2021-10-10','developer','2021-10-10');
+INSERT categoria_lectura values(5,'Ciencias Humanas','Ciencias Humanas','activo','developer','2021-10-10','developer','2021-10-10');
+INSERT categoria_lectura values(6,'Pensamiento matemático','Pensamiento matemático','activo','developer','2021-10-10','developer','2021-10-10');
+INSERT categoria_lectura values(7,'Ética','Ética','activo','developer','2021-10-10','developer','2021-10-10');
 
 INSERT avatar values(1,'jardinero','','','activo','developer','2021-10-10','developer','2021-10-10');
 INSERT avatar values(2,'matemático','','','activo','developer','2021-10-10','developer','2021-10-10');
@@ -51,6 +53,7 @@ INSERT lectura_grado values(8,'activo','developer','2021-10-10','developer','202
 
 
 INSERT rol values(1,'alumno','alumno en curso','activo','developer','2021-10-10','developer','2021-10-10');
+INSERT rol values(2,'docente','docente en curso','activo','developer','2021-10-10','developer','2021-10-10');
 
 INSERT pregunta_tipo values(1,'OpcMult','Opción múltiple cuestionamiento directo','activo','developer','2021-10-10','developer','2021-10-10');
 INSERT pregunta_tipo values(2,'CuaText','Cuadro de texto','activo','developer','2021-10-10','developer','2021-10-10');
@@ -336,6 +339,8 @@ INSERT usuario values(7,'Admin03','Admin','03','Admin03','Admin03@developer.com'
 INSERT usuario values(8,'CDL001','Pearson','01','CDL_Pearson001','CDL_Pearson001@developer.com','cdlpearson01!','activo','developer','2021-10-10','developer','2021-10-10',1,1);
 INSERT usuario values(9,'CDL002','Pearson','02','CDL_Pearson002','CDL_Pearson002@developer.com','cdlpearson02!','activo','developer','2021-10-10','developer','2021-10-10',1,1);
 INSERT usuario values(10,'CDL003','Pearson','03','CDL_Pearson003','CDL_Pearson003@developer.com','cdlpearson03!','activo','developer','2021-10-10','developer','2021-10-10',1,1);
+INSERT usuario values(11,'docente','docente','00','docente','docente@developer.com','docente123','activo','developer','2021-10-10','developer','2021-10-10',2,2);
+
 
 INSERT inscripcion VALUES(1,'developer','activo','2021-10-10','developer','2021-10-10',1,1,1);
 INSERT inscripcion VALUES(2,'developer','activo','2021-10-10','developer','2021-10-10',1,2,2);
