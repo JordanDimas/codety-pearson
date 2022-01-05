@@ -20,6 +20,7 @@ require('dotenv').config({ path: '../../../.env' });
 class sessionController {
     login(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
+            let isfound = false;
             console.log(Date().toLocaleString(), " :", "User login: ", req.body);
             const usuario = req.body;
             let resp;
@@ -60,60 +61,98 @@ class sessionController {
                                             i.id_ciclo_escolar = ce.id_ciclo_escolar and
                                             u.nombre_usuario = ? and 
                                             u.contraseña = ?`, [[req.body.nombreUsuario], [req.body.contraseña]]);
-                let qry1 = `select  insi.id_insignia,
-                                insi.nombre,
-                                insi.alias,
-                                sum(ra.puntos) total
-                        from    inscripcion insc,
-                                actividad_inscripcion ai, 
-                                respuesta_actividad ra,
-                                pregunta p,
-                                insignia insi
-                        WHERE   insc.id_inscripcion = ai.id_inscripcion and
-                                ai.id_actividad_inscripcion = ra.id_actividad_inscripcion and 
-                                ra.id_pregunta = p.id_pregunta and 
-                                p.id_insignia = insi.id_insignia and
-                                insc.id_inscripcion  = ${resp[0].id_inscripcion}
-                                GROUP BY insi.nombre`;
-                let resp1 = yield database_1.default.query(qry1);
                 console.log(`resp : ${JSON.stringify(resp)}`);
-                console.log(`resp1 : ${JSON.stringify(resp1)}`);
-                let lista_insignia = [];
-                for (let list of resp1) {
-                    let aux = {
-                        id_insignia: list.id_insignia,
-                        nombre: list.nombre,
-                        alias: list.alias,
-                        total: list.total
-                    };
-                    lista_insignia.push(aux);
-                }
-                if (resp.length > 0) {
-                    const token = generateAccesToken(usuario);
-                    console.log("token: ", token);
-                    let resultado = {
+                let qry;
+                let resultado;
+                const token = generateAccesToken(usuario);
+                if (resp.length <= 0) {
+                    console.log("no es alumno. . .");
+                    qry = `SELECT u.id_usuario,                      
+                                    u.nombre,
+                                    u.apellido_paterno apelllidoPaterno,
+                                    u.apellido_materno apellidoMaterno,
+                                    u.nombre_usuario nombreUsuario,
+                                    r.nombre rol
+                            FROM    usuario u,
+                                    rol r 
+                            WHERE   r.id_rol = u.id_rol and
+                                    u.nombre_usuario = '${req.body.nombreUsuario}' and 
+                                    u.contraseña = '${req.body.contraseña}'`;
+                    let resp1 = yield database_1.default.query(qry);
+                    if (resp1.length > 0) {
+                        isfound = true;
+                    }
+                    console.log(`resp1 : ${JSON.stringify(resp)}`);
+                    resultado = {
                         token_usuario: token,
                         usuario: {
-                            id_usuario: resp[0].id_usuario,
-                            nombre: resp[0].nombre,
-                            apelllidoPaterno: resp[0].apelllidoPaterno,
-                            apellidoMaterno: resp[0].apellidoMaterno,
-                            nombreUsuario: resp[0].nombreUsuario,
-                            rol: resp[0].rol,
-                        },
-                        escuela: {
-                            id_inscripcion: resp[0].id_inscripcion,
-                            id_disttribucion_escuela: resp[0].id_distribucion_escuela,
-                            escuela: resp[0].escuela,
-                            grado: resp[0].grado,
-                            grupo: resp[0].grupo,
-                            ciclo: resp[0].ciclo,
-                            año: resp[0].año,
-                            ciudad: resp[0].ciudad,
-                            pais: resp[0].pais,
-                        },
-                        insignias: lista_insignia
+                            id_usuario: resp1[0].id_usuario,
+                            nombre: resp1[0].nombre,
+                            apelllidoPaterno: resp1[0].apelllidoPaterno,
+                            apellidoMaterno: resp1[0].apellidoMaterno,
+                            nombreUsuario: resp1[0].nombreUsuario,
+                            rol: resp1[0].rol,
+                        }
                     };
+                }
+                else {
+                    isfound = true;
+                    console.log("es alumno . . .");
+                    qry = `select  insi.id_insignia,
+                                    insi.nombre,
+                                    insi.alias,
+                                    sum(ra.puntos) total
+                            from    inscripcion insc,
+                                    actividad_inscripcion ai, 
+                                    respuesta_actividad ra,
+                                    pregunta p,
+                                    insignia insi
+                            WHERE   insc.id_inscripcion = ai.id_inscripcion and
+                                    ai.id_actividad_inscripcion = ra.id_actividad_inscripcion and 
+                                    ra.id_pregunta = p.id_pregunta and 
+                                    p.id_insignia = insi.id_insignia and
+                                    insc.id_inscripcion  = ${resp[0].id_inscripcion}
+                                    GROUP BY insi.nombre`;
+                    let resp1 = yield database_1.default.query(qry);
+                    console.log(`resp1 : ${JSON.stringify(resp)}`);
+                    let lista_insignia = [];
+                    for (let list of resp1) {
+                        let aux = {
+                            id_insignia: list.id_insignia,
+                            nombre: list.nombre,
+                            alias: list.alias,
+                            total: list.total
+                        };
+                        lista_insignia.push(aux);
+                    }
+                    if (resp.length > 0) {
+                        console.log("token: ", token);
+                        resultado = {
+                            token_usuario: token,
+                            usuario: {
+                                id_usuario: resp[0].id_usuario,
+                                nombre: resp[0].nombre,
+                                apelllidoPaterno: resp[0].apelllidoPaterno,
+                                apellidoMaterno: resp[0].apellidoMaterno,
+                                nombreUsuario: resp[0].nombreUsuario,
+                                rol: resp[0].rol,
+                            },
+                            escuela: {
+                                id_inscripcion: resp[0].id_inscripcion,
+                                id_disttribucion_escuela: resp[0].id_distribucion_escuela,
+                                escuela: resp[0].escuela,
+                                grado: resp[0].grado,
+                                grupo: resp[0].grupo,
+                                ciclo: resp[0].ciclo,
+                                año: resp[0].año,
+                                ciudad: resp[0].ciudad,
+                                pais: resp[0].pais,
+                            },
+                            insignias: lista_insignia
+                        };
+                    }
+                }
+                if (isfound) {
                     const response = {
                         codigo: "200.pearson.0000",
                         mensaje: "operacion exitosa",

@@ -23,14 +23,15 @@ class actividadController {
             const reqData = req.query;
             let resp;
             try {
-                resp = yield database_1.default.query(`SELECT * FROM actividad where id_distribucion_escuela = ?`, [reqData.id_distribucion_escuela]);
+                resp = yield database_1.default.query(`SELECT * FROM actividad where grado = ? order by sesion asc`, [reqData.grado]);
                 let actividad_lista = [];
                 for (let list of resp) {
                     let aux = {
                         id_actividad: list.id_actividad,
                         nombre: list.nombre,
-                        fecha_Inicio: list.fecha_Inicio,
-                        fecha_fin: list.fecha_fin,
+                        grado: list.grado,
+                        sesion: list.sesion,
+                        bloque: list.bloque,
                         bateria: list.bateria,
                         status_actividad: list.status_actividad
                     };

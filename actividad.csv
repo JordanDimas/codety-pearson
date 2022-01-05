@@ -1,0 +1,104 @@
+$$,Id_actividad,nombre,grado,sesion,bloque,bateria,status_actividad,reg_status,created_by,created_date,last_update_by,last_update_date,id_lectura,id_actividad_tipo,id_actividad_categoria,&&
+$$,1,Sesión de inicio grado 1,1,1,1,1,activa,activo,developer,2021-10-10,developer,2021-10-10,null,1,1,&&
+$$,2,Evaluación diagnóstica grado 1,1,2,1,1,activa,activo,developer,2021-10-11,developer,2021-10-11,null,2,2,&&
+$$,3,Credencial escolar,1,3,1,1,activa,activo,developer,2021-10-12,developer,2021-10-12,1,3,3,&&
+$$,4,De que esta hecho el universo,1,4,1,1,activa,activo,developer,2021-10-13,developer,2021-10-13,2,3,4,&&
+$$,5,Los tipos de color,1,5,1,1,activa,activo,developer,2021-10-14,developer,2021-10-14,3,3,4,&&
+$$,6,Flix el elefante,1,6,1,1,activa,activo,developer,2021-10-15,developer,2021-10-15,4,3,4,&&
+$$,7,Una familia peculiar,1,7,1,1,activa,activo,developer,2021-10-16,developer,2021-10-16,5,3,4,&&
+$$,8,Conjuntos,1,8,1,1,activa,activo,developer,2021-10-17,developer,2021-10-17,6,3,4,&&
+$$,9,Todos queremos lo mismo,1,9,1,1,activa,activo,developer,2021-10-18,developer,2021-10-18,7,3,4,&&
+$$,10,Diferentes representaciones de los numeros,1,10,1,1,activa,activo,developer,2021-10-19,developer,2021-10-19,8,3,4,&&
+$$,11,El viaje de la papa,1,11,1,1,activa,activo,developer,2021-10-20,developer,2021-10-20,9,3,4,&&
+$$,12,Se reabre el telon,1,12,1,1,activa,activo,developer,2021-10-21,developer,2021-10-21,10,3,4,&&
+$$,13,Sin importar las diferencias,1,13,1,1,activa,activo,developer,2021-10-22,developer,2021-10-22,11,3,4,&&
+$$,14,¡Manos limpias!,1,14,1,1,activa,activo,developer,2021-10-23,developer,2021-10-23,12,3,5,&&
+$$,15,El espanol una lengua con hambre,1,15,1,1,activa,activo,developer,2021-10-24,developer,2021-10-24,13,3,4,&&
+$$,16,De panza pa arriba,1,16,1,1,activa,activo,developer,2021-10-25,developer,2021-10-25,14,3,4,&&
+$$,17,Disenados para bailar,1,17,1,1,activa,activo,developer,2021-10-26,developer,2021-10-26,15,3,4,&&
+$$,18,Una regla para todos,1,18,1,1,activa,activo,developer,2021-10-27,developer,2021-10-27,16,3,4,&&
+$$,19,Las rayas no hacen al tigre,1,19,1,1,activa,activo,developer,2021-10-28,developer,2021-10-28,17,3,4,&&
+$$,20,El viajero de Hispania,1,20,1,1,activa,activo,developer,2021-10-29,developer,2021-10-29,18,4,2,&&
+$$,21,"Encima de mí, sólo las estrellas",1,21,1,1,activa,activo,developer,2021-10-30,developer,2021-10-30,19,5,6,&&
+$$,22,Las emociones en el arte,1,22,2,1,activa,activo,developer,2021-10-31,developer,2021-10-31,20,3,4,&&
+$$,23,La desaparicion de los mayas,1,23,2,1,activa,activo,developer,2021-11-01,developer,2021-11-01,21,3,4,&&
+$$,24,Un ecosistema particular,1,24,2,1,activa,activo,developer,2021-11-02,developer,2021-11-02,22,3,4,&&
+$$,25,Los limites de la libertad,1,25,2,1,activa,activo,developer,2021-11-03,developer,2021-11-03,23,3,4,&&
+$$,26,El origen del mole,1,26,2,1,activa,activo,developer,2021-11-04,developer,2021-11-04,24,3,4,&&
+$$,27,El panal de las abejas,1,27,2,1,activa,activo,developer,2021-11-05,developer,2021-11-05,25,3,4,&&
+$$,28,Otro mirar,1,28,2,1,activa,activo,developer,2021-11-06,developer,2021-11-06,26,3,4,&&
+$$,29,Etica y moral,1,29,2,1,activa,activo,developer,2021-11-07,developer,2021-11-07,27,3,4,&&
+$$,30,Raton de campo y Raton de ciudad,1,30,2,1,activa,activo,developer,2021-11-08,developer,2021-11-08,28,3,4,&&
+$$,31,El ser humano mas antiguo de America,1,31,2,1,activa,activo,developer,2021-11-09,developer,2021-11-09,29,3,4,&&
+$$,32,Nuevas costumbres,1,32,2,1,activa,activo,developer,2021-11-10,developer,2021-11-10,30,3,4,&&
+$$,33,Cuentos y fábulas: tradición oral,1,33,2,1,activa,activo,developer,2021-11-11,developer,2021-11-11,31,3,4,&&
+$$,34,¿Co?mopesamos y medimos a los dinosaurios?,1,34,2,1,activa,activo,developer,2021-11-12,developer,2021-11-12,32,3,4,&&
+$$,35,El yoyo de la señora Chu,1,35,2,1,activa,activo,developer,2021-11-13,developer,2021-11-13,33,3,4,&&
+$$,36,Como ven los perros,1,36,2,1,activa,activo,developer,2021-11-14,developer,2021-11-14,34,3,3,&&
+$$,37,La autodeterminacion en la niñez,1,37,2,1,activa,activo,developer,2021-11-15,developer,2021-11-15,35,3,4,&&
+$$,38,La historia en las rocas,1,38,2,1,activa,activo,developer,2021-11-16,developer,2021-11-16,36,3,4,&&
+$$,39,El valor del respeto,1,39,2,1,activa,activo,developer,2021-11-17,developer,2021-11-17,37,4,2,&&
+$$,40,Las llamas en América,1,40,2,1,activa,activo,developer,2021-11-18,developer,2021-11-18,38,5,6,&&
+$$,316,Sesión de inicio grado 6,6,316,1,1,activa,activo,developer,2021-11-19,developer,2021-11-19,null,1,1,&&
+$$,317,Evaluación diagnóstica grado 6,6,317,1,1,activa,activo,developer,2021-11-20,developer,2021-11-20,null,2,2,&&
+$$,318,Convocatoria,6,318,1,1,activa,activo,developer,2021-11-21,developer,2021-11-21,39,3,3,&&
+$$,319,El consumismo y la generación de basura,6,319,1,1,activa,activo,developer,2021-11-22,developer,2021-11-22,40,3,4,&&
+$$,320,"Artesanías, patrimonio de una cultura",6,320,1,1,activa,activo,developer,2021-11-23,developer,2021-11-23,41,3,4,&&
+$$,321,La despedida,6,321,1,1,activa,activo,developer,2021-11-24,developer,2021-11-24,42,3,4,&&
+$$,322,Manual para saber que? es cierto y que? no en las apps,6,322,1,1,activa,activo,developer,2021-11-25,developer,2021-11-25,43,3,4,&&
+$$,323,La teoría de Ramsey en ejemplos,6,323,1,1,activa,activo,developer,2021-11-26,developer,2021-11-26,44,3,4,&&
+$$,324,Las palabras importan,6,324,1,1,activa,activo,developer,2021-11-27,developer,2021-11-27,45,3,4,&&
+$$,325,El equilibrio de Nash,6,325,1,1,activa,activo,developer,2021-11-28,developer,2021-11-28,46,3,4,&&
+$$,326,Seguridad alimentaria y quinua,6,326,1,1,activa,activo,developer,2021-11-29,developer,2021-11-29,47,3,4,&&
+$$,327,La música y los festivalesde hoy,6,327,1,1,activa,activo,developer,2021-11-30,developer,2021-11-30,48,3,4,&&
+$$,328,Día de Muertos,6,328,1,1,activa,activo,developer,2021-12-01,developer,2021-12-01,49,3,4,&&
+$$,329,La hidrósfera,6,329,1,1,activa,activo,developer,2021-12-02,developer,2021-12-02,50,3,3,&&
+$$,330,El español de aquí? y el español de allá?: ¿podremos entendernos?,6,330,1,1,activa,activo,developer,2021-12-03,developer,2021-12-03,51,3,4,&&
+$$,331,¿Zombis?,6,331,1,1,activa,activo,developer,2021-12-04,developer,2021-12-04,52,3,4,&&
+$$,332,Las propiedades insólitas del agua,6,332,1,1,activa,activo,developer,2021-12-05,developer,2021-12-05,53,3,4,&&
+$$,333,¿Cómo combatir la violencia de género?,6,333,1,1,activa,activo,developer,2021-12-06,developer,2021-12-06,54,3,4,&&
+$$,334,Ritmo,6,334,1,1,activa,activo,developer,2021-12-07,developer,2021-12-07,55,3,4,&&
+$$,335,Ciudades inmortales,6,335,1,1,activa,activo,developer,2021-12-08,developer,2021-12-08,56,4,2,&&
+$$,336,El secreto de la tierra,6,336,2,1,activa,activo,developer,2021-12-09,developer,2021-12-09,57,5,6,&&
+$$,337,La tecnología y el arte: una unión original,6,337,2,1,activa,activo,developer,2021-12-10,developer,2021-12-10,58,3,4,&&
+$$,338,El aburrimiento,6,338,2,1,activa,activo,developer,2021-12-11,developer,2021-12-11,59,3,4,&&
+$$,339,Fragmento 1: La infanta Castile y el insólito mundo de Anomalía,6,339,2,1,activa,activo,developer,2021-12-12,developer,2021-12-12,60,3,4,&&
+$$,340,Más allá de las etiquetas está la diversidad,6,340,2,1,activa,activo,developer,2021-12-13,developer,2021-12-13,61,3,4,&&
+$$,341,Fragmento 2: La infanta Castile y el insólito mundo de Anomalía,6,341,2,1,activa,activo,developer,2021-12-14,developer,2021-12-14,62,3,4,&&
+$$,342,El genio de las matemáticasmodernas,6,342,2,1,activa,activo,developer,2021-12-15,developer,2021-12-15,63,3,4,&&
+$$,343,Fragmento 3: La infanta Castile y el insólito mundo de Anomalía,6,343,2,1,activa,activo,developer,2021-12-16,developer,2021-12-16,64,3,4,&&
+$$,344,¿Cómo debemos vivir?,6,344,2,1,activa,activo,developer,2021-12-17,developer,2021-12-17,65,3,4,&&
+$$,345,Fragmento 4: La infanta Castile y el insólito mundo de Anomalía,6,345,2,1,activa,activo,developer,2021-12-18,developer,2021-12-18,66,3,4,&&
+$$,346,Litio: la nueva promesa sustentable,6,346,2,1,activa,activo,developer,2021-12-19,developer,2021-12-19,67,3,4,&&
+$$,347,La infanta Castile y el insólito mundo de Anomalía,6,347,2,1,activa,activo,developer,2021-12-20,developer,2021-12-20,68,3,4,&&
+$$,348,Las criptomonedas: economía digital,6,348,2,1,activa,activo,developer,2021-12-21,developer,2021-12-21,69,3,4,&&
+$$,349,En busca de una solución para el hambre mundial,6,349,2,1,activa,activo,developer,2021-12-22,developer,2021-12-22,70,3,4,&&
+$$,350,Carta de queja,6,350,2,1,activa,activo,developer,2021-12-23,developer,2021-12-23,71,3,3,&&
+$$,351,Mamuts de nuevo a la vida. Clonación,6,351,2,1,activa,activo,developer,2021-12-24,developer,2021-12-24,72,3,4,&&
+$$,352,La felicidad en el mundo,6,352,2,1,activa,activo,developer,2021-12-25,developer,2021-12-25,73,3,4,&&
+$$,353,El precio de la moda,6,353,2,1,activa,activo,developer,2021-12-26,developer,2021-12-26,74,3,4,&&
+$$,354,Una ética para el mundo digital,6,354,2,1,activa,activo,developer,2021-12-27,developer,2021-12-27,75,4,2,&&
+$$,355,El canal de Panamá,6,355,3,1,activa,activo,developer,2021-12-28,developer,2021-12-28,76,5,6,&&
+$$,356,La fotografía profesiona,6,356,3,1,activa,activo,developer,2021-12-29,developer,2021-12-29,77,3,4,&&
+$$,357,El amor no discrimina,6,357,3,1,activa,activo,developer,2021-12-30,developer,2021-12-30,78,3,4,&&
+$$,358,El hogar de las palabras,6,358,3,1,activa,activo,developer,2021-12-31,developer,2021-12-31,79,3,4,&&
+$$,359,¿Existe vida en otros planetas?,6,359,3,1,activa,activo,developer,2022-01-01,developer,2022-01-01,80,3,4,&&
+$$,360,Instructivo medico,6,360,3,1,activa,activo,developer,2022-01-02,developer,2022-01-02,81,3,3,&&
+$$,361,Alquimia,6,361,3,1,activa,activo,developer,2022-01-03,developer,2022-01-03,82,3,4,&&
+$$,362,El lado humano en las catástrofes,6,362,3,1,activa,activo,developer,2022-01-04,developer,2022-01-04,83,3,4,&&
+$$,363,Mujeres artistas latinoamericanas,6,363,3,1,activa,activo,developer,2022-01-05,developer,2022-01-05,84,3,4,&&
+$$,364,Ciencias Naturale,6,364,3,1,activa,activo,developer,2022-01-06,developer,2022-01-06,85,3,4,&&
+$$,365,"Pocos colores son suficientes, pero ¿cuántos son pocos?",6,365,3,1,activa,activo,developer,2022-01-07,developer,2022-01-07,86,3,4,&&
+$$,366,Postales del mar,6,366,3,1,activa,activo,developer,2022-01-08,developer,2022-01-08,87,3,4,&&
+$$,367,Ciencias Naturales,6,367,3,1,activa,activo,developer,2022-01-09,developer,2022-01-09,88,3,4,&&
+$$,368,Rebe-K,6,368,3,1,activa,activo,developer,2022-01-10,developer,2022-01-10,89,3,4,&&
+$$,369,Formulario de ingreso,6,369,3,1,activa,activo,developer,2022-01-11,developer,2022-01-11,90,3,3,&&
+$$,370,Las ramas de la psicología,6,370,3,1,activa,activo,developer,2022-01-12,developer,2022-01-12,91,3,4,&&
+$$,371,Américamegadiversa. ¿Cuál es nuestra responsabilidad?,6,371,3,1,activa,activo,developer,2022-01-13,developer,2022-01-13,92,3,4,&&
+$$,372,"¿De verdad quería ver, escuchar o comprar eso?",6,372,3,1,activa,activo,developer,2022-01-14,developer,2022-01-14,93,4,2,&&
+$$,373,"Los premios, las trayectorias y el dinero",6,373,3,1,activa,activo,developer,2022-01-15,developer,2022-01-15,94,5,6,&&
+$$,374,Narraciones orales como esencia de la cultura,6,374,3,1,activa,activo,developer,2022-01-16,developer,2022-01-16,95,3,4,&&
+$$,375,La basura que vino de lejos,6,375,3,1,activa,activo,developer,2022-01-17,developer,2022-01-17,96,3,4,&&
+$$,376,La grandeza esta? en la diversidad,6,376,3,1,activa,activo,developer,2022-01-18,developer,2022-01-18,97,3,4,&&
+$$,377,Evaluación Final grado 6,6,377,3,1,activa,activo,developer,2022-01-19,developer,2022-01-19,null,6,2,&&
+$$,378,Sesión de cierre grado 6,6,378,3,1,activa,activo,developer,2022-01-20,developer,2022-01-20,null,7,7,&&

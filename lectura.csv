@@ -1,0 +1,98 @@
+$,id_lectura,lectura_nombre,Descripcion,texto,reg_status,created_by,created_date,last_update_by,last_update_date,id_categoria_lectura,&&
+$,1,Credencial escolar,,,activo,developer,2021-10-12,developer,2021-10-12,1,&&
+$,2,De que esta hecho el universo,,,activo,developer,2021-10-13,developer,2021-10-13,2,&&
+$,3,Los tipos de color,,,activo,developer,2021-10-14,developer,2021-10-14,3,&&
+$,4,Flix el elefante,,,activo,developer,2021-10-15,developer,2021-10-15,4,&&
+$,5,Una familia peculiar,,,activo,developer,2021-10-16,developer,2021-10-16,5,&&
+$,6,Conjuntos,,,activo,developer,2021-10-17,developer,2021-10-17,6,&&
+$,7,Todos queremos lo mismo,,,activo,developer,2021-10-18,developer,2021-10-18,7,&&
+$,8,Diferentes representaciones de los numeros,,,activo,developer,2021-10-19,developer,2021-10-19,6,&&
+$,9,El viaje de la papa,,,activo,developer,2021-10-20,developer,2021-10-20,5,&&
+$,10,Se reabre el telon,,,activo,developer,2021-10-21,developer,2021-10-21,3,&&
+$,11,Sin importar las diferencias,,,activo,developer,2021-10-22,developer,2021-10-22,4,&&
+$,12,¡Manos limpias!,,,activo,developer,2021-10-23,developer,2021-10-23,1,&&
+$,13,El espanol una lengua con hambre,,,activo,developer,2021-10-24,developer,2021-10-24,5,&&
+$,14,De panza pa arriba,,,activo,developer,2021-10-25,developer,2021-10-25,2,&&
+$,15,Disenados para bailar,,,activo,developer,2021-10-26,developer,2021-10-26,2,&&
+$,16,Una regla para todos,,,activo,developer,2021-10-27,developer,2021-10-27,7,&&
+$,17,Las rayas no hacen al tigre,,,activo,developer,2021-10-28,developer,2021-10-28,4,&&
+$,18,El viajero de Hispania,,,activo,developer,2021-10-29,developer,2021-10-29,4,&&
+$,19,"Encima de mí, sólo las estrellas",,,activo,developer,2021-10-30,developer,2021-10-30,4,&&
+$,20,Las emociones en el arte,,,activo,developer,2021-10-31,developer,2021-10-31,5,&&
+$,21,La desaparicion de los mayas,,,activo,developer,2021-11-01,developer,2021-11-01,5,&&
+$,22,Un ecosistema particular,,,activo,developer,2021-11-02,developer,2021-11-02,4,&&
+$,23,Los limites de la libertad,,,activo,developer,2021-11-03,developer,2021-11-03,7,&&
+$,24,El origen del mole,,,activo,developer,2021-11-04,developer,2021-11-04,4,&&
+$,25,El panal de las abejas,,,activo,developer,2021-11-05,developer,2021-11-05,6,&&
+$,26,Otro mirar,,,activo,developer,2021-11-06,developer,2021-11-06,4,&&
+$,27,Etica y moral,,,activo,developer,2021-11-07,developer,2021-11-07,7,&&
+$,28,Raton de campo y Raton de ciudad,,,activo,developer,2021-11-08,developer,2021-11-08,4,&&
+$,29,El ser humano mas antiguo de America,,,activo,developer,2021-11-09,developer,2021-11-09,5,&&
+$,30,Nuevas costumbres,,,activo,developer,2021-11-10,developer,2021-11-10,4,&&
+$,31,Cuentos y fábulas: tradición oral,,,activo,developer,2021-11-11,developer,2021-11-11,5,&&
+$,32,¿Co?mopesamos y medimos a los dinosaurios?,,,activo,developer,2021-11-12,developer,2021-11-12,2,&&
+$,33,El yoyo de la señora Chu,,,activo,developer,2021-11-13,developer,2021-11-13,1,&&
+$,34,Como ven los perros,,,activo,developer,2021-11-14,developer,2021-11-14,2,&&
+$,35,La autodeterminacion en la niñez,,,activo,developer,2021-11-15,developer,2021-11-15,7,&&
+$,36,La historia en las rocas,,,activo,developer,2021-11-16,developer,2021-11-16,4,&&
+$,37,El valor del respeto,,,activo,developer,2021-11-17,developer,2021-11-17,7,&&
+$,38,Las llamas en América,,,activo,developer,2021-11-18,developer,2021-11-18,5,&&
+$,39,Convocatoria,,,activo,developer,2021-11-21,developer,2021-11-21,1,&&
+$,40,El consumismo y la generación de basura,,,activo,developer,2021-11-22,developer,2021-11-22,2,&&
+$,41,"Artesanías, patrimonio de una cultura",,,activo,developer,2021-11-23,developer,2021-11-23,3,&&
+$,42,La despedida,,,activo,developer,2021-11-24,developer,2021-11-24,4,&&
+$,43,Manual para saber que? es cierto y que? no en las apps,,,activo,developer,2021-11-25,developer,2021-11-25,5,&&
+$,44,La teoría de Ramsey en ejemplos,,,activo,developer,2021-11-26,developer,2021-11-26,6,&&
+$,45,Las palabras importan,,,activo,developer,2021-11-27,developer,2021-11-27,7,&&
+$,46,El equilibrio de Nash,,,activo,developer,2021-11-28,developer,2021-11-28,6,&&
+$,47,Seguridad alimentaria y quinua,,,activo,developer,2021-11-29,developer,2021-11-29,5,&&
+$,48,La música y los festivalesde hoy,,,activo,developer,2021-11-30,developer,2021-11-30,3,&&
+$,49,Día de Muertos,,,activo,developer,2021-12-01,developer,2021-12-01,4,&&
+$,50,La hidrósfera,,,activo,developer,2021-12-02,developer,2021-12-02,1,&&
+$,51,El español de aquí? y el español de allá?: ¿podremos entendernos?,,,activo,developer,2021-12-03,developer,2021-12-03,5,&&
+$,52,¿Zombis?,,,activo,developer,2021-12-04,developer,2021-12-04,2,&&
+$,53,Las propiedades insólitas del agua,,,activo,developer,2021-12-05,developer,2021-12-05,2,&&
+$,54,¿Cómo combatir la violencia de género?,,,activo,developer,2021-12-06,developer,2021-12-06,7,&&
+$,55,Ritmo,,,activo,developer,2021-12-07,developer,2021-12-07,4,&&
+$,56,Ciudades inmortales,,,activo,developer,2021-12-08,developer,2021-12-08,4,&&
+$,57,El secreto de la tierra,,,activo,developer,2021-12-09,developer,2021-12-09,4,&&
+$,58,La tecnología y el arte: una unión original,,,activo,developer,2021-12-10,developer,2021-12-10,3,&&
+$,59,El aburrimiento,,,activo,developer,2021-12-11,developer,2021-12-11,5,&&
+$,60,Fragmento 1: La infanta Castile y el insólito mundo de Anomalía,,,activo,developer,2021-12-12,developer,2021-12-12,4,&&
+$,61,Más allá de las etiquetas está la diversidad,,,activo,developer,2021-12-13,developer,2021-12-13,7,&&
+$,62,Fragmento 2: La infanta Castile y el insólito mundo de Anomalía,,,activo,developer,2021-12-14,developer,2021-12-14,4,&&
+$,63,El genio de las matemáticasmodernas,,,activo,developer,2021-12-15,developer,2021-12-15,6,&&
+$,64,Fragmento 3: La infanta Castile y el insólito mundo de Anomalía,,,activo,developer,2021-12-16,developer,2021-12-16,4,&&
+$,65,¿Cómo debemos vivir?,,,activo,developer,2021-12-17,developer,2021-12-17,7,&&
+$,66,Fragmento 4: La infanta Castile y el insólito mundo de Anomalía,,,activo,developer,2021-12-18,developer,2021-12-18,4,&&
+$,67,Litio: la nueva promesa sustentable,,,activo,developer,2021-12-19,developer,2021-12-19,7,&&
+$,68,La infanta Castile y el insólito mundo de Anomalía,,,activo,developer,2021-12-20,developer,2021-12-20,4,&&
+$,69,Las criptomonedas: economía digital,,,activo,developer,2021-12-21,developer,2021-12-21,5,&&
+$,70,En busca de una solución para el hambre mundial,,,activo,developer,2021-12-22,developer,2021-12-22,2,&&
+$,71,Carta de queja,,,activo,developer,2021-12-23,developer,2021-12-23,1,&&
+$,72,Mamuts de nuevo a la vida. Clonación,,,activo,developer,2021-12-24,developer,2021-12-24,2,&&
+$,73,La felicidad en el mundo,,,activo,developer,2021-12-25,developer,2021-12-25,7,&&
+$,74,El precio de la moda,,,activo,developer,2021-12-26,developer,2021-12-26,5,&&
+$,75,Una ética para el mundo digital,,,activo,developer,2021-12-27,developer,2021-12-27,7,&&
+$,76,El canal de Panamá,,,activo,developer,2021-12-28,developer,2021-12-28,5,&&
+$,77,La fotografía profesiona,,,activo,developer,2021-12-29,developer,2021-12-29,3,&&
+$,78,El amor no discrimina,,,activo,developer,2021-12-30,developer,2021-12-30,7,&&
+$,79,El hogar de las palabras,,,activo,developer,2021-12-31,developer,2021-12-31,4,&&
+$,80,¿Existe vida en otros planetas?,,,activo,developer,2022-01-01,developer,2022-01-01,2,&&
+$,81,Instructivo medico,,,activo,developer,2022-01-02,developer,2022-01-02,1,&&
+$,82,Alquimia,,,activo,developer,2022-01-03,developer,2022-01-03,2,&&
+$,83,El lado humano en las catástrofes,,,activo,developer,2022-01-04,developer,2022-01-04,5,&&
+$,84,Mujeres artistas latinoamericanas,,,activo,developer,2022-01-05,developer,2022-01-05,3,&&
+$,85,Ciencias Naturale,,,activo,developer,2022-01-06,developer,2022-01-06,2,&&
+$,86,"Pocos colores son suficientes, pero ¿cuántos son pocos?",,,activo,developer,2022-01-07,developer,2022-01-07,6,&&
+$,87,Postales del mar,,,activo,developer,2022-01-08,developer,2022-01-08,4,&&
+$,88,Ciencias Naturales,,,activo,developer,2022-01-09,developer,2022-01-09,2,&&
+$,89,Rebe-K,,,activo,developer,2022-01-10,developer,2022-01-10,7,&&
+$,90,Formulario de ingreso,,,activo,developer,2022-01-11,developer,2022-01-11,1,&&
+$,91,Las ramas de la psicología,,,activo,developer,2022-01-12,developer,2022-01-12,5,&&
+$,92,Américamegadiversa. ¿Cuál es nuestra responsabilidad?,,,activo,developer,2022-01-13,developer,2022-01-13,2,&&
+$,93,"¿De verdad quería ver, escuchar o comprar eso?",,,activo,developer,2022-01-14,developer,2022-01-14,6,&&
+$,94,"Los premios, las trayectorias y el dinero",,,activo,developer,2022-01-15,developer,2022-01-15,3,&&
+$,95,Narraciones orales como esencia de la cultura,,,activo,developer,2022-01-16,developer,2022-01-16,3,&&
+$,96,La basura que vino de lejos,,,activo,developer,2022-01-17,developer,2022-01-17,5,&&
+$,97,La grandeza esta? en la diversidad,,,activo,developer,2022-01-18,developer,2022-01-18,6,&&
