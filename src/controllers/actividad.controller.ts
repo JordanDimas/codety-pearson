@@ -91,7 +91,8 @@ class actividadController {
             resp = await pool.query(`select l.id_lectura,
                                             l.nombre,
                                             l.descripcion,
-                                            l.texto
+                                            l.texto,
+                                            a.id_actividad
                                     from    lectura l,
                                             actividad  a
                                     where   a.id_actividad = ? and
@@ -107,13 +108,13 @@ class actividadController {
                                              h.alias habilidad,
                                              i.nombre insignia,
                                              pt.nombre tipo_pregunta
-                                    from     lectura_pregunta lp,
+                                    from     actividad_pregunta ap,
                                              pregunta  p,
                                              habilidad h,
                                              insignia i,
                                              pregunta_tipo pt
-                                    where    lp.id_lectura = ? and
-                                             lp.id_pregunta = p.id_pregunta and
+                                    where    ap.id_actividad = ? and
+                                             ap.id_pregunta = p.id_pregunta and
                                              p.id_habilidad = h.id_habilidad and
                                              p.id_insignia = i.id_insignia and
                                              p.id_pregunta_tipo = pt.id_pregunta_tipo 

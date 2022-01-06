@@ -1,0 +1,9 @@
+descripcion,$$,id_pregunta_tipo,nombre,descripcion,reg_status,created_by,created_date,last_update_by,last_update_date,&&
+Lista desplegable,$$,4,LisDes,Lista desplegable,activo,developer,2021-10-12,developer,2021-10-12,&&
+Opción múltiple asosiación de elementos,$$,5,OpcMultAsoEle,Opción múltiple asosiación de elementos,activo,developer,2021-10-13,developer,2021-10-13,&&
+Opción múltiple completar,$$,6,OpcMulCom,Opción múltiple completar,activo,developer,2021-10-14,developer,2021-10-14,&&
+Opción múltiple jerarquización,$$,7,OpcMulJer,Opción múltiple jerarquización,activo,developer,2021-10-15,developer,2021-10-15,&&
+Opción múltiple lista desplegable,$$,8,OpcMulLisDes,Opción múltiple lista desplegable,activo,developer,2021-10-16,developer,2021-10-16,&&
+Opción múltiple selección de elementos,$$,9,OpcMulSelEle,Opción múltiple selección de elementos,activo,developer,2021-10-17,developer,2021-10-17,&&
+Opción múltiple tabla de arrastrar y soltar,$$,10,OpcMulTabArrSol,Opción múltiple tabla de arrastrar y soltar,activo,developer,2021-10-18,developer,2021-10-18,&&
+Tabla de arrastrar y soltar,$$,11,TabArrSol,Tabla de arrastrar y soltar,activo,developer,2021-10-19,developer,2021-10-19,&&
