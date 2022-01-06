@@ -119,7 +119,7 @@ class actividadController {
                                              p.id_habilidad = h.id_habilidad and
                                              p.id_insignia = i.id_insignia and
                                              p.id_pregunta_tipo = pt.id_pregunta_tipo 
-                                             order by p.id_pregunta asc`, [resp[0].id_lectura]);
+                                             order by p.id_pregunta asc`, [resp[0].id_actividad]);
                 console.log(`resp : ${JSON.stringify(resp2)}`);
                 let preguntas = [];
                 for (let list of resp2) {
