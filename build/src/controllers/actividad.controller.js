@@ -93,15 +93,7 @@ class actividadController {
             let resp2;
             let resp3;
             try {
-                resp = yield database_1.default.query(`select l.id_lectura,
-                                            l.nombre,
-                                            l.descripcion,
-                                            l.texto,
-                                            a.id_actividad
-                                    from    lectura l,
-                                            actividad  a
-                                    where   a.id_actividad = ? and
-                                            l.id_lectura = a.id_lectura`, [data.id_actividad]);
+                resp = yield database_1.default.query(`select * from  actividad where id_actividad = ?`, [data.id_actividad]);
                 console.log(`resp : ${JSON.stringify(resp)}`);
                 resp2 = yield database_1.default.query(`select p.id_pregunta,
                                              p.pregunta,
@@ -120,7 +112,7 @@ class actividadController {
                                              p.id_insignia = i.id_insignia and
                                              p.id_pregunta_tipo = pt.id_pregunta_tipo 
                                              order by p.id_pregunta asc`, [resp[0].id_actividad]);
-                console.log(`resp : ${JSON.stringify(resp2)}`);
+                console.log(`resp2 : ${JSON.stringify(resp2)}`);
                 let preguntas = [];
                 for (let list of resp2) {
                     let aux = {
@@ -144,7 +136,7 @@ class actividadController {
                                                  respuesta  r
                             where                p.id_pregunta = ? and
                                                  p.id_pregunta = r.id_pregunta`, [pregunta.id_pregunta]);
-                    console.log(`resp : ${JSON.stringify(resp3)}`);
+                    console.log(`res3 : ${JSON.stringify(resp3)}`);
                     let respuestas = [];
                     for (let respuesta of resp3) {
                         let aux2 = {
