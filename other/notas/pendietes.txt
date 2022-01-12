@@ -1,0 +1,55 @@
+-------------------------------------------------------------------
+cambios en los registros por codigo
+
+1.- correccion de datos en apartado de administrador por si el registro por codiggo no es corercto
+2.- desnvinvulacion de codigos de usuarios mal registrados
+
+----------------------------------------------------------------
+creacion de escuelas
+
+se creara la escuela primero antes de hacer el registro de usuarios
+definir formulario y datos de creacion de escuela.
+
+-------------------------------------------------------------------
+apí de busqueda de codigos de registro-
+
+busqueda donde no se ha usado , regresar que no se ha usado.
+busqueda donde si se encuentra regresar.
+
+nombres. 
+apellido paterno.
+apéllido materno.
+grado.
+grupo.
+pais.
+ciudad.
+escuela.
+status.
+vigencia del codigo.
+fecha de redencion.
+
+-------------------------------------------------------------------
+descarga de excel por escuela 
+
+buscar los codigo y mostrar en el excel.
+
+nombres. 
+apellido paterno.
+apéllido materno.
+grado.
+grupo.
+pais.
+ciudad.
+escuela.
+status.
+vigencia del codigo.
+fecha de redencion.
+
+-------------------------------------------------------------------
+apis para dar de baja en entidades.
+
+1.- usuarios.
+2.- grupos.
+3.- escuelas.
+
+-------------------------------------------------------------------

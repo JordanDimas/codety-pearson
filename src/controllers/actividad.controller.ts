@@ -88,15 +88,7 @@ class actividadController {
         let resp2: any;
         let resp3: any;
         try {
-            resp = await pool.query(`select l.id_lectura,
-                                            l.nombre,
-                                            l.descripcion,
-                                            l.texto,
-                                            a.id_actividad
-                                    from    lectura l,
-                                            actividad  a
-                                    where   a.id_actividad = ? and
-                                            l.id_lectura = a.id_lectura`,
+            resp = await pool.query(`select * from  actividad where id_actividad = ?`,
                 [data.id_actividad]);
 
 
@@ -122,7 +114,7 @@ class actividadController {
                 [resp[0].id_actividad]);
 
 
-            console.log(`resp : ${JSON.stringify(resp2)}`);
+            console.log(`resp2 : ${JSON.stringify(resp2)}`);
 
             let preguntas = [];
 
@@ -153,7 +145,7 @@ class actividadController {
                                                  p.id_pregunta = r.id_pregunta`,
                     [pregunta.id_pregunta]);
 
-                console.log(`resp : ${JSON.stringify(resp3)}`);
+                console.log(`res3 : ${JSON.stringify(resp3)}`);
 
 
                 let respuestas = [];
