@@ -98,6 +98,7 @@ class actividadController {
                 resp2 = yield database_1.default.query(`select p.id_pregunta,
                                              p.pregunta,
                                              p.puntos,
+                                             p.texto,
                                              h.alias habilidad,
                                              i.nombre insignia,
                                              pt.nombre tipo_pregunta
@@ -119,6 +120,7 @@ class actividadController {
                         id_pregunta: list.id_pregunta,
                         pregunta: list.pregunta,
                         puntos: list.puntos,
+                        texto: list.texto,
                         habilidad: list.habilidad,
                         insignia: list.insignia,
                         tipo_pregunta: list.tipo_pregunta,
